@@ -1,8 +1,10 @@
+-- Create and Load Nested JSON Source Data
 CREATE OR REPLACE TABLE nested_data (
     record_id NUMBER,
     data VARIANT
 );
 
+-- Create Nested Data Table and Insert JSON Records
 INSERT INTO nested_data (record_id, data)
 SELECT
     1,

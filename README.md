@@ -30,6 +30,10 @@ This project demonstrates the complete lifecycle of semi-structured data enginee
 
 ### High-Level Data Architecture Diagram
 
+![Data Architecture and Flow Diagram](docs/data_flow_diagram.png)
+
+#### Interactive Architecture Diagram
+
 ```mermaid
 flowchart TD
     subgraph Data Generation
@@ -415,6 +419,10 @@ LATERAL FLATTEN(INPUT => r.value:comments) AS c;
 Converting semi-structured data into a relational Third Normal Form (3NF) model improves analytical query performance, reduces data redundancy, and enforces strict schema constraints.
 
 ### Normalized Relational Schema (ERD)
+
+![Data Mart Entity Relationship Diagram](docs/ER_Diagram.png)
+
+#### Interactive ERD Diagram
 
 ```mermaid
 erDiagram

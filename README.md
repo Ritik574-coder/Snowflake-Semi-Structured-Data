@@ -422,59 +422,6 @@ Converting semi-structured data into a relational Third Normal Form (3NF) model 
 
 ![Data Mart Entity Relationship Diagram](docs/ER_Diagram.png)
 
-#### Interactive ERD Diagram
-
-```mermaid
-erDiagram
-    CUSTOMERS ||--o{ CUSTOMER_EMAIL : "has emails"
-    CUSTOMERS ||--o{ ORDERS : "places"
-    ORDERS ||--|{ ORDER_ITEMS : "contains"
-    PRODUCTS ||--o{ ORDER_ITEMS : "ordered in"
-    PRODUCTS ||--o{ REVIEWS : "receives"
-    REVIEWS ||--o{ REVIEW_COMMENTS : "has feedback"
-
-    CUSTOMERS {
-        NUMBER customer_id PK
-        VARCHAR first_name
-        VARCHAR last_name
-    }
-
-    CUSTOMER_EMAIL {
-        NUMBER customer_id FK
-        VARCHAR type
-        VARCHAR email
-        BOOLEAN verified
-    }
-
-    ORDERS {
-        VARCHAR order_id PK
-        NUMBER customer_id FK
-    }
-
-    PRODUCTS {
-        VARCHAR product_id PK
-        VARCHAR product_name
-    }
-
-    ORDER_ITEMS {
-        VARCHAR order_id FK
-        VARCHAR product_id FK
-        NUMBER quantity
-    }
-
-    REVIEWS {
-        VARCHAR review_id PK
-        VARCHAR product_id FK
-        NUMBER rating
-    }
-
-    REVIEW_COMMENTS {
-        VARCHAR review_id FK
-        VARCHAR comment_type
-        VARCHAR comment
-    }
-```
-
 ### Normalization Pipeline SQL
 
 Below is the transformation logic extracting relational entities from `staging.nested_data` into `mart` relational tables:

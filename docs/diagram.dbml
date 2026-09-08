@@ -1,0 +1,130 @@
+Project semi_structured_data {
+  database_type: "Snowflake"
+  Note: "Normalized data model generated from nested JSON stored in Snowflake VARIANT"
+}
+
+
+// ==============================
+// STAGING / RAW DATA
+// ==============================
+
+Table staging.nested_data {
+  record_id number [pk]
+  data variant
+
+  Note: "Raw nested JSON document stored in Snowflake VARIANT"
+}
+
+
+// ==============================
+// CUSTOMER DOMAIN
+// ==============================
+
+Table mart.customers {
+  customer_id number [pk, increment]
+  first_name varchar(50)
+  last_name varchar(50)
+
+  Note: "Unique customer records extracted from nested JSON"
+}
+
+
+Table mart.customer_email {
+  customer_id number
+  type varchar(50)
+  email varchar(251)
+  verified boolean
+
+  Note: "Customer email addresses extracted by flattening nested email/address arrays"
+}
+
+
+// ==============================
+// ORDER DOMAIN
+// ==============================
+
+Table mart.orders {
+  order_id varchar(20) [pk]
+  customer_id number
+
+  Note: "Customer orders extracted from nested JSON"
+}
+
+
+// ==============================
+// PRODUCT DOMAIN
+// ==============================
+
+Table mart.products {
+  product_id varchar(20) [pk]
+  product_name varchar(100)
+
+  Note: "Unique products extracted from order items"
+}
+
+
+// ==============================
+// ORDER ITEM DOMAIN
+// ==============================
+
+Table mart.order_items {
+  order_id varchar(20)
+  product_id varchar(20)
+  quantity number(5,0)
+
+  Note: "Products purchased within each order"
+}
+
+
+// ==============================
+// REVIEW DOMAIN
+// ==============================
+
+Table mart.reviews {
+  review_id varchar(20) [pk]
+  product_id varchar(20)
+  rating number(3,2)
+
+  Note: "Product reviews extracted from nested review arrays"
+}
+
+
+// ==============================
+// REVIEW COMMENT DOMAIN
+// ==============================
+
+Table mart.review_comments {
+  review_id varchar(20)
+  comment_type varchar(100)
+  comment varchar(250)
+
+  Note: "Comments extracted from nested review comment arrays"
+}
+
+
+// ==============================
+// RELATIONSHIPS
+// ==============================
+
+// Customer -> Email
+Ref: mart.customer_email.customer_id > mart.customers.customer_id
+
+
+// Customer -> Orders
+Ref: mart.orders.customer_id > mart.customers.customer_id
+
+
+// Order -> Order Items
+Ref: mart.order_items.order_id > mart.orders.order_id
+
+
+// Product -> Order Items
+Ref: mart.order_items.product_id > mart.products.product_id
+
+
+// Product -> Reviews
+Ref: mart.reviews.product_id > mart.products.product_id
+
+
+// Review -> Review Comments
+Ref: mart.review_comments.review_id > mart.reviews.review_id

@@ -12,3 +12,9 @@ SELECT * FROM products LIMIT 3;
 
 -- extractring 3 sample row from orders tanle 
 SELECT * FROM orders LIMIT 3;
+
+
+SELECT * FROM customers ; 
+SELECT * FROM orders ; 
+SELECT * FROM products ;
+

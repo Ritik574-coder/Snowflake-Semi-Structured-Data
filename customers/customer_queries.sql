@@ -56,3 +56,4 @@ CROSS JOIN LATERAL FLATTEN(
     ) as d
 ; 
 
+

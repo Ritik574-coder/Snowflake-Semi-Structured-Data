@@ -1,6 +1,70 @@
 -- switch to corrent databse 
 USE DATABASE SEMI_STRUCTURED_DB ;
 
+-- extracting order_items info from nested order table 
+SELECT
+    i.value:product_id::STRING                             as product_id,
+    i.value:product_name::STRING                           as product_name,
+    i.value:options:color::STRING                          as color,
+    i.value:options:size::STRING                           as size,
+    i.value:quantity::NUMBER(4,0)                          as quantity,
+    i.value:unit_price::NUMBER(10,2)                       as unit_price,
+    i.value:line_total::NUMBER(10,2)                       as line_total
+FROM staging.orders as o 
+
+  CROSS JOIN LATERAL FLATTEN(
+      INPUT => o.order_data:items
+    ) as i 
+;
+
+-- extracting discount info from nested order table 
+SELECT
+    d.value:applied_amount::NUMBER(5,2)                    as applied_amount,
+    d.value:code::STRING                                   as code,
+    d.value:type::STRING                                   as type,
+    d.value:value::NUMBER(5,2)                             as value
+FROM staging.orders as o 
+  CROSS JOIN LATERAL FLATTEN(
+      INPUT => o.order_data:discounts
+    ) as d 
+; 
+
+-- extracting payment info from nested order table 
+SELECT 
+    o.order_data:payment:transaction_id::STRING            as transaction_id,   
+    o.order_data:payment:method::STRING                    as method,
+    o.order_data:payment:payment_status::STRING            as payment_status,
+    o.order_data:payment:amount_paid::NUMBER(10,2)         as amount_paid
+FROM staging.orders as o ;
+
+-- extracting payment info from nested order table 
+SELECT 
+    o.order_data:payment:billing_address:country::STRING   as country,
+    o.order_data:payment:billing_address:state::STRING     as state,
+    o.order_data:payment:billing_address:city::STRING      as city,
+    o.order_data:payment:billing_address:zip::STRING       as zip,
+    o.order_data:payment:billing_address:street::STRING    as street
+FROM staging.orders as o ;
+
+-- extracting shippment info from nested order table
+SELECT 
+    o.order_data:shipping:tracking_number::STRING          as tracking_number,
+    o.order_data:shipping:carrier::STRING                  as carrier,
+    o.order_data:shipping:cost::NUMBER(10,2)               as cost,
+    o.order_data:shipping:estimated_delivery::DATE         as estimated_delivery,
+    o.order_data:shipping:method::STRING                   as method,
+FROM staging.orders as o ;
+
+-- extrecting shppment address info from nested order table 
+SELECT 
+    o.order_data:shipping:shipping_address:country::STRING as country,
+    o.order_data:shipping:shipping_address:state::STRING   as state,
+    o.order_data:shipping:shipping_address:city::STRING    as city,
+    o.order_data:shipping:shipping_address:zip::STRING     as zip,
+    o.order_data:shipping:shipping_address:street::STRING  as street
+FROM staging.orders as o ;
+
+-- extracting all inof from nested order table 
 SELECT
     --extracting order items info 
     i.value:product_id::STRING                             as product_id,

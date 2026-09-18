@@ -1,4 +1,5 @@
-
+-- creating view of product table 
+CREATE VIEW analytics.dnz_products AS  
 SELECT 
     product_id,
     r.value:comment::STRING                                      as comment,

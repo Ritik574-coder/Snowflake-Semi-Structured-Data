@@ -1,4 +1,4 @@
--- querying customers table 
+-- creating view of customer table 
 CREATE OR REPLACE VIEW analytics.dnz_customers AS 
 SELECT 
     c.customer_id,

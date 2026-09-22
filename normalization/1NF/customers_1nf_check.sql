@@ -1,28 +1,9 @@
-USE DATABASE semi_structured_db ; 
-select * from staging.customers; 
+-- # checking the first normal form in customer table 
 
+-- # switch to correct database 
+USE DATABASE semi_structured_db ;
 
-SELECT  * FROM analytics.dnz_customers ;
-SELECT * FROM analytics.dnz_products ;
-SELECT * FROM analytics.dnz_orders ;
-
-SELECT 
-    COUNT(*) as customer_count,
-    COUNT_IF(
-        REGEXP_LIKE(
-            CUSTOMER_NAME, '.*[,.|*:;].*'
-        )
-    ) as suspicious_customer_name,
-
-    COUNT_IF(
-        REGEXP_LIKE(
-            CUSTOMER_NAME, '.*[,.|*:;].*'
-            )
-    ) as suspious_count
-
-FROM analytics.dnz_customers ;
-
-
+-- # describe the view 
 DESCRIBE VIEW analytics.dnz_customers ;
 
 SELECT 

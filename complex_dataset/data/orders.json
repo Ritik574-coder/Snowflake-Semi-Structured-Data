@@ -1,0 +1,7310 @@
+[
+  {
+    "order_id": "ORD-1001",
+    "order_date": "2026-09-01",
+    "order_status": "DELIVERED",
+    "customer": {
+      "customer_id": "C-2001",
+      "profile": {
+        "name": "Aanya Sharma",
+        "age": 34,
+        "preferences": {
+          "favorite_categories": [
+            "Electronics",
+            "Books"
+          ],
+          "preferred_brands": [
+            "NovaTech",
+            "PageTurn"
+          ],
+          "communication_channels": [
+            "email",
+            "sms"
+          ],
+          "notification_settings": {
+            "promo": [
+              "email",
+              "sms"
+            ],
+            "order_updates": [
+              "push"
+            ]
+          }
+        },
+        "contact": {
+          "email": "aanya.sharma@example.com",
+          "phone": "+91-98765-43210",
+          "addresses": [
+            {
+              "type": "home",
+              "city": "Mumbai",
+              "state": "MH",
+              "geo": {
+                "latitude": 19.076,
+                "longitude": 72.8777
+              },
+              "tags": [
+                "primary",
+                "apartment"
+              ]
+            },
+            {
+              "type": "work",
+              "city": "pune",
+              "state": "MH",
+              "geo": {
+                "latitude": 18.5204,
+                "longitude": 73.8567
+              },
+              "tags": []
+            }
+          ]
+        }
+      },
+      "loyalty": {
+        "tier": "Gold",
+        "points": 5400,
+        "benefits": [
+          {
+            "benefit_id": "B-FS",
+            "name": "Free Shipping",
+            "rules": {
+              "min_spend": 0.0,
+              "categories": []
+            }
+          },
+          {
+            "benefit_id": "B-EA",
+            "name": "Early Access",
+            "rules": {
+              "min_spend": null,
+              "categories": [
+                "Electronics"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "items": [
+      {
+        "item_id": "ORD-1001-I1",
+        "product": {
+          "product_id": "P101",
+          "name": "UltraBook 14",
+          "category": "Electronics",
+          "brand": "NovaTech",
+          "attributes": {
+            "color": "Silver",
+            "ram": "16GB",
+            "storage": "512GB"
+          },
+          "supplier": {
+            "name": "Nova Components Ltd",
+            "certifications": [
+              {
+                "code": "ISO9001",
+                "expires": "2027-03-01"
+              },
+              {
+                "code": "RoHS",
+                "expires": "2026-12-31"
+              }
+            ]
+          }
+        },
+        "quantity": 1,
+        "pricing": {
+          "unit_price": 1199.0,
+          "discount": 169.9,
+          "tax": 82.33
+        },
+        "variants": [
+          {
+            "variant_id": "V-101-S16",
+            "name": "Silver / 16GB",
+            "attributes": {
+              "color": "Silver",
+              "ram": "16GB"
+            }
+          },
+          {
+            "variant_id": "V-101-S16-US",
+            "name": "US keyboard layout",
+            "attributes": {
+              "layout": "US"
+            }
+          }
+        ],
+        "discounts": [
+          {
+            "discount_type": "PERCENT",
+            "code": "FALL10",
+            "amount": 119.9,
+            "conditions": [
+              {
+                "condition_type": "min_cart_value",
+                "value": "1000"
+              },
+              {
+                "condition_type": "category",
+                "value": "Electronics"
+              }
+            ]
+          },
+          {
+            "discount_type": "COUPON",
+            "code": "WELCOMEBACK",
+            "amount": 50.0,
+            "conditions": [
+              {
+                "condition_type": "customer_tier",
+                "value": "Gold"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item_id": "ORD-1001-I2",
+        "product": {
+          "product_id": "P102",
+          "name": "Noise-Cancel Headphones",
+          "category": "Electronics",
+          "brand": "SonicWave",
+          "attributes": {
+            "color": "Black",
+            "bluetooth": "5.3",
+            "anc": "true"
+          },
+          "supplier": {
+            "name": "SonicWave Mfg",
+            "certifications": [
+              {
+                "code": "CE",
+                "expires": "2028-01-15"
+              }
+            ]
+          }
+        },
+        "quantity": 2,
+        "pricing": {
+          "unit_price": 199.0,
+          "discount": 0.0,
+          "tax": 31.84
+        },
+        "variants": [
+          {
+            "variant_id": "V-102-BK",
+            "name": "Black",
+            "attributes": {
+              "color": "Black"
+            }
+          }
+        ],
+        "discounts": []
+      }
+    ],
+    "payments": [
+      {
+        "payment_id": "PAY-1001-1",
+        "method": "card",
+        "amount": 1545.77,
+        "status": "captured",
+        "metadata": {
+          "network": "visa",
+          "last4": "4242",
+          "3ds": "true"
+        },
+        "attempts": [
+          {
+            "attempt_no": 1,
+            "result": "approved",
+            "gateway_response": {
+              "code": "00",
+              "avs": "Y"
+            }
+          }
+        ]
+      }
+    ],
+    "shipments": [
+      {
+        "shipment_id": "SHP-1001-1",
+        "carrier": "BlueDart",
+        "tracking": "BD778899",
+        "packages": [
+          {
+            "package_id": "PKG-1001-1-1",
+            "weight": 2.4,
+            "dimensions": {
+              "length": 40.0,
+              "width": 30.0,
+              "height": 8.0
+            },
+            "contents": [
+              {
+                "item_id": "ORD-1001-I1",
+                "qty": 1
+              }
+            ]
+          },
+          {
+            "package_id": "PKG-1001-1-2",
+            "weight": 0.9,
+            "dimensions": {
+              "length": 25.0,
+              "width": 20.0,
+              "height": 10.0
+            },
+            "contents": [
+              {
+                "item_id": "ORD-1001-I2",
+                "qty": 2
+              }
+            ]
+          }
+        ],
+        "events": [
+          {
+            "timestamp": "2026-09-02T08:00:00Z",
+            "status": "picked_up",
+            "location": {
+              "city": "Mumbai",
+              "country": "IN"
+            }
+          },
+          {
+            "timestamp": "2026-09-03T14:30:00Z",
+            "status": "in_transit",
+            "location": {
+              "city": "Nagpur",
+              "country": "IN"
+            }
+          },
+          {
+            "timestamp": "2026-09-05T11:10:00Z",
+            "status": "delivered",
+            "location": {
+              "city": "Pune",
+              "country": "IN"
+            }
+          }
+        ]
+      }
+    ],
+    "fees": {
+      "shipping": {
+        "amount": 0.0,
+        "taxable": false
+      },
+      "gift_wrap": {
+        "amount": 4.5,
+        "taxable": true
+      }
+    },
+    "labels": {
+      "warehouse": [
+        "WH-WEST"
+      ],
+      "fraud_flags": []
+    },
+    "audit_log": [
+      {
+        "ts": "2026-09-01T10:00:00Z",
+        "actor": "system",
+        "action": "created"
+      },
+      {
+        "ts": "2026-09-01T10:01:10Z",
+        "actor": "gateway",
+        "action": "paid"
+      },
+      {
+        "ts": "2026-09-02T08:00:00Z",
+        "actor": "wms",
+        "action": "shipped",
+        "carrier": "BlueDart"
+      },
+      {
+        "ts": "2026-09-05T11:10:00Z",
+        "actor": "carrier",
+        "action": "delivered"
+      }
+    ],
+    "metadata": {
+      "source": "web",
+      "campaign": "FALL26",
+      "device": "ios"
+    }
+  },
+  {
+    "order_id": "ORD-1002",
+    "order_date": "2026-09-01",
+    "order_status": "delivered",
+    "customer": {
+      "customer_id": "C-2002",
+      "profile": {
+        "name": "rahul verma",
+        "age": 29,
+        "preferences": {
+          "favorite_categories": [
+            "Sports",
+            "Health"
+          ],
+          "preferred_brands": [
+            "FlexFit",
+            "MuscleLab"
+          ],
+          "communication_channels": [
+            "push"
+          ],
+          "notification_settings": {}
+        },
+        "contact": {
+          "email": "RAHUL.VERMA@EXAMPLE.COM",
+          "phone": null,
+          "addresses": [
+            {
+              "type": "home",
+              "city": "Delhi",
+              "state": "DL",
+              "geo": {
+                "latitude": 28.7041,
+                "longitude": 77.1025
+              },
+              "tags": null
+            }
+          ]
+        }
+      },
+      "loyalty": {
+        "tier": "silver",
+        "points": 1200,
+        "benefits": []
+      }
+    },
+    "items": [
+      {
+        "item_id": "ORD-1002-I1",
+        "product": {
+          "product_id": "P107",
+          "name": "Yoga Mat Pro",
+          "category": "Sports",
+          "brand": "FlexFit",
+          "attributes": {
+            "thickness": "6mm",
+            "material": "TPE"
+          },
+          "supplier": {
+            "name": "FlexFit Co",
+            "certifications": [
+              {
+                "code": "REACH",
+                "expires": "2027-02-28"
+              }
+            ]
+          }
+        },
+        "quantity": 1,
+        "pricing": {
+          "unit_price": 45.0,
+          "discount": 0.0,
+          "tax": 3.6
+        },
+        "variants": [
+          {
+            "variant_id": "V-107-BL",
+            "name": "Blue / 6mm",
+            "attributes": {
+              "color": "Blue",
+              "thickness": "6mm"
+            }
+          }
+        ],
+        "discounts": null
+      },
+      {
+        "item_id": "ORD-1002-I2",
+        "product": {
+          "product_id": "P112",
+          "name": "Protein Powder 2kg",
+          "category": "Health",
+          "brand": "MuscleLab",
+          "attributes": {
+            "flavor": "Chocolate",
+            "vegan": "false"
+          },
+          "supplier": {
+            "name": "MuscleLab Foods",
+            "certifications": [
+              {
+                "code": "GMP",
+                "expires": "2026-12-01"
+              }
+            ]
+          }
+        },
+        "quantity": 3,
+        "pricing": {
+          "unit_price": 54.0,
+          "discount": 30.0,
+          "tax": 10.56
+        },
+        "variants": [],
+        "discounts": [
+          {
+            "discount_type": "BULK",
+            "code": "PROTEIN3",
+            "amount": 30.0,
+            "conditions": [
+              {
+                "condition_type": "min_quantity",
+                "value": "3"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item_id": "ORD-1002-I3",
+        "product": {
+          "product_id": "P105",
+          "name": "Stainless Water Bottle",
+          "category": "Home & Kitchen",
+          "brand": "HydroPeak",
+          "attributes": {},
+          "supplier": null
+        },
+        "quantity": 1,
+        "pricing": {
+          "unit_price": 22.5,
+          "discount": 0.0,
+          "tax": 1.8
+        },
+        "variants": null,
+        "discounts": []
+      }
+    ],
+    "payments": [
+      {
+        "payment_id": "PAY-1002-1",
+        "method": "upi",
+        "amount": 219.45,
+        "status": "captured",
+        "metadata": {
+          "vpa": "rahul@okbank"
+        },
+        "attempts": null
+      }
+    ],
+    "shipments": [
+      {
+        "shipment_id": "SHP-1002-1",
+        "carrier": "Delhivery",
+        "tracking": "DL5512",
+        "packages": [
+          {
+            "package_id": "PKG-1002-1-1",
+            "weight": 3.2,
+            "dimensions": {
+              "length": 35.0,
+              "width": 25.0,
+              "height": 20.0
+            },
+            "contents": [
+              {
+                "item_id": "ORD-1002-I1",
+                "qty": 1
+              },
+              {
+                "item_id": "ORD-1002-I2",
+                "qty": 3
+              },
+              {
+                "item_id": "ORD-1002-I3",
+                "qty": 1
+              }
+            ]
+          }
+        ],
+        "events": [
+          {
+            "timestamp": "2026-09-02T09:00:00Z",
+            "status": "picked_up",
+            "location": {
+              "city": "Delhi",
+              "country": "IN"
+            }
+          },
+          {
+            "timestamp": "2026-09-04T16:45:00Z",
+            "status": "delivered",
+            "location": {
+              "city": "Delhi",
+              "country": "IN"
+            }
+          }
+        ]
+      }
+    ],
+    "fees": {
+      "shipping": {
+        "amount": 3.99,
+        "taxable": false
+      }
+    },
+    "labels": {},
+    "audit_log": [
+      {
+        "ts": "2026-09-01T11:00:00Z",
+        "actor": "system",
+        "action": "created"
+      },
+      {
+        "ts": "2026-09-04T16:45:00Z",
+        "actor": "carrier",
+        "action": "delivered"
+      }
+    ],
+    "metadata": {
+      "source": "app",
+      "device": "android"
+    }
+  },
+  {
+    "order_id": "ORD-1003",
+    "order_date": "2026-09-02",
+    "order_status": "Shipped",
+    "customer": {
+      "customer_id": "C-2003",
+      "profile": {
+        "name": "Meera Iyer",
+        "age": 41,
+        "preferences": {
+          "favorite_categories": [
+            "Home & Kitchen",
+            "Apparel"
+          ],
+          "preferred_brands": [
+            "BrewMaster",
+            "GreenLoom",
+            "Lumo"
+          ],
+          "communication_channels": [
+            "email"
+          ],
+          "notification_settings": {
+            "promo": [],
+            "order_updates": [
+              "email",
+              "sms"
+            ]
+          }
+        },
+        "contact": {
+          "email": "meera.iyer@example.com",
+          "phone": "+91-99887-76655",
+          "addresses": [
+            {
+              "type": "home",
+              "city": "Chennai",
+              "state": "TN",
+              "geo": {
+                "latitude": 13.0827,
+                "longitude": 80.2707
+              },
+              "tags": [
+                "primary"
+              ]
+            },
+            {
+              "type": "billing",
+              "city": "Chennai",
+              "state": "TN",
+              "geo": {
+                "latitude": 13.0827,
+                "longitude": 80.2707
+              },
+              "tags": [
+                "primary"
+              ]
+            },
+            {
+              "type": "gift",
+              "city": "Bengaluru",
+              "state": "KA",
+              "geo": null,
+              "tags": [
+                "gift",
+                "office"
+              ]
+            }
+          ]
+        }
+      },
+      "loyalty": {
+        "tier": "Platinum",
+        "points": 15250,
+        "benefits": [
+          {
+            "benefit_id": "B-FS",
+            "name": "Free Shipping",
+            "rules": {
+              "min_spend": 0.0,
+              "categories": []
+            }
+          },
+          {
+            "benefit_id": "B-CS",
+            "name": "Concierge Support",
+            "rules": null
+          },
+          {
+            "benefit_id": "B-DC",
+            "name": "Double Points",
+            "rules": {
+              "min_spend": 250.0,
+              "categories": [
+                "Home & Kitchen",
+                "Apparel"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "items": [
+      {
+        "item_id": "ORD-1003-I1",
+        "product": {
+          "product_id": "P108",
+          "name": "Espresso Maker",
+          "category": "Home & Kitchen",
+          "brand": "BrewMaster",
+          "attributes": {
+            "pressure": "15bar",
+            "color": "Red"
+          },
+          "supplier": {
+            "name": "BrewMaster Italia",
+            "certifications": [
+              {
+                "code": "CE",
+                "expires": "2027-09-09"
+              },
+              {
+                "code": "UL",
+                "expires": "2026-10-01"
+              }
+            ]
+          }
+        },
+        "quantity": 1,
+        "pricing": {
+          "unit_price": 129.0,
+          "discount": 59.5,
+          "tax": 5.56
+        },
+        "variants": [
+          {
+            "variant_id": "V-108-RD",
+            "name": "Red",
+            "attributes": {
+              "color": "Red"
+            }
+          },
+          {
+            "variant_id": "V-108-EU",
+            "name": "EU plug",
+            "attributes": {
+              "plug": "EU"
+            }
+          }
+        ],
+        "discounts": [
+          {
+            "discount_type": "FIXED",
+            "code": "COFFEE25",
+            "amount": 25.0,
+            "conditions": [
+              {
+                "condition_type": "category",
+                "value": "Home & Kitchen"
+              }
+            ]
+          },
+          {
+            "discount_type": "LOYALTY",
+            "code": "PLAT5",
+            "amount": 15.0,
+            "conditions": [
+              {
+                "condition_type": "customer_tier",
+                "value": "Platinum"
+              },
+              {
+                "condition_type": "min_points",
+                "value": "10000"
+              }
+            ]
+          },
+          {
+            "discount_type": "PERCENT",
+            "code": "BUNDLE5",
+            "amount": 19.5,
+            "conditions": null
+          }
+        ]
+      },
+      {
+        "item_id": "ORD-1003-I2",
+        "product": {
+          "product_id": "P114",
+          "name": "Scented Candle Set",
+          "category": "Home & Kitchen",
+          "brand": "Lumo",
+          "attributes": {
+            "scent": "Lavender"
+          },
+          "supplier": {
+            "name": "Lumo Wax Co",
+            "certifications": null
+          }
+        },
+        "quantity": 4,
+        "pricing": {
+          "unit_price": 18.5,
+          "discount": 8.0,
+          "tax": 5.28
+        },
+        "variants": [
+          {
+            "variant_id": "V-114-LV",
+            "name": "Lavender",
+            "attributes": {
+              "scent": "Lavender"
+            }
+          },
+          {
+            "variant_id": "V-114-VN",
+            "name": "Vanilla",
+            "attributes": {
+              "scent": "Vanilla"
+            }
+          }
+        ],
+        "discounts": [
+          {
+            "discount_type": "BULK",
+            "code": "CANDLE4",
+            "amount": 8.0,
+            "conditions": [
+              {
+                "condition_type": "min_quantity",
+                "value": "4"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item_id": "ORD-1003-I3",
+        "product": {
+          "product_id": "P104",
+          "name": "Organic Cotton Tee",
+          "category": "apparel",
+          "brand": "GreenLoom",
+          "attributes": {
+            "material": "cotton",
+            "fit": "regular"
+          },
+          "supplier": {
+            "name": "GreenLoom Textiles",
+            "certifications": [
+              {
+                "code": "GOTS",
+                "expires": "2026-11-30"
+              },
+              {
+                "code": "OEKO-TEX",
+                "expires": "2027-06-30"
+              }
+            ]
+          }
+        },
+        "quantity": 2,
+        "pricing": {
+          "unit_price": 24.0,
+          "discount": 0.0,
+          "tax": 3.84
+        },
+        "variants": [
+          {
+            "variant_id": "V-104-WH-M",
+            "name": "White / M",
+            "attributes": {
+              "color": "White",
+              "size": "M"
+            }
+          }
+        ],
+        "discounts": null
+      }
+    ],
+    "payments": [
+      {
+        "payment_id": "PAY-1003-1",
+        "method": "card",
+        "amount": 98.18,
+        "status": "captured",
+        "metadata": {
+          "network": "mastercard",
+          "last4": "0007"
+        },
+        "attempts": [
+          {
+            "attempt_no": 1,
+            "result": "declined",
+            "gateway_response": {
+              "code": "05"
+            }
+          },
+          {
+            "attempt_no": 2,
+            "result": "approved",
+            "gateway_response": {
+              "code": "00"
+            }
+          }
+        ]
+      },
+      {
+        "payment_id": "PAY-1003-2",
+        "method": "gift_card",
+        "amount": 100.0,
+        "status": "captured",
+        "metadata": {
+          "card_no": "GC-8891",
+          "issuer": "HomeStore"
+        },
+        "attempts": null
+      }
+    ],
+    "shipments": [
+      {
+        "shipment_id": "SHP-1003-1",
+        "carrier": "DHL",
+        "tracking": "DHL90123",
+        "packages": [
+          {
+            "package_id": "PKG-1003-1-1",
+            "weight": 1.8,
+            "dimensions": {
+              "length": 30.0,
+              "width": 30.0,
+              "height": 25.0
+            },
+            "contents": [
+              {
+                "item_id": "ORD-1003-I1",
+                "qty": 1
+              }
+            ]
+          },
+          {
+            "package_id": "PKG-1003-1-2",
+            "weight": 1.1,
+            "dimensions": {
+              "length": 22.0,
+              "width": 18.0,
+              "height": 12.0
+            },
+            "contents": [
+              {
+                "item_id": "ORD-1003-I2",
+                "qty": 4
+              },
+              {
+                "item_id": "ORD-1003-I3",
+                "qty": 2
+              }
+            ]
+          }
+        ],
+        "events": [
+          {
+            "timestamp": "2026-09-03T10:00:00Z",
+            "status": "picked_up",
+            "location": {
+              "city": "Chennai",
+              "country": "IN"
+            }
+          },
+          {
+            "timestamp": "2026-09-04T09:20:00Z",
+            "status": "in_transit",
+            "location": {
+              "city": "Bengaluru",
+              "country": "IN"
+            }
+          }
+        ]
+      }
+    ],
+    "fees": {
+      "shipping": {
+        "amount": 0.0,
+        "taxable": false
+      }
+    },
+    "labels": {
+      "warehouse": [
+        "WH-SOUTH"
+      ]
+    },
+    "audit_log": [
+      {
+        "ts": "2026-09-02T12:00:00Z",
+        "actor": "system",
+        "action": "created"
+      },
+      {
+        "ts": "2026-09-03T10:00:00Z",
+        "actor": "wms",
+        "action": "shipped"
+      }
+    ],
+    "metadata": {
+      "source": "web",
+      "campaign": "HOME-FEST",
+      "gift": "true"
+    }
+  },
+  {
+    "order_id": "ORD-1004",
+    "order_date": "2026-09-02",
+    "order_status": "Pending",
+    "customer": {
+      "customer_id": "C-2004",
+      "profile": {
+        "name": "Karan Malhotra",
+        "age": null,
+        "preferences": null,
+        "contact": {
+          "email": "karan.m@example.com",
+          "phone": "+91-91234-56789",
+          "addresses": []
+        }
+      },
+      "loyalty": null
+    },
+    "items": [
+      {
+        "item_id": "ORD-1004-I1",
+        "product": {
+          "product_id": "P110",
+          "name": "Gaming Mouse G7",
+          "category": "Electronics",
+          "brand": "Zephyr",
+          "attributes": null,
+          "supplier": {
+            "name": "Zephyr Peripherals",
+            "certifications": [
+              {
+                "code": "FCC",
+                "expires": "2028-05-05"
+              }
+            ]
+          }
+        },
+        "quantity": 1,
+        "pricing": {
+          "unit_price": 59.0,
+          "discount": 0.0,
+          "tax": null
+        },
+        "variants": null,
+        "discounts": null
+      }
+    ],
+    "payments": [
+      {
+        "payment_id": "PAY-1004-1",
+        "method": "cod",
+        "amount": 59.0,
+        "status": "pending",
+        "metadata": null,
+        "attempts": null
+      }
+    ],
+    "shipments": [],
+    "fees": null,
+    "labels": null,
+    "audit_log": null,
+    "metadata": {}
+  },
+  {
+    "order_id": "ORD-1005",
+    "order_date": "2026-09-03",
+    "order_status": "CANCELLED",
+    "customer": {
+      "customer_id": "C-2005",
+      "profile": {
+        "name": "Sofia Rossi",
+        "age": 27,
+        "preferences": {
+          "favorite_categories": [
+            "Footwear",
+            "Sports"
+          ],
+          "preferred_brands": [
+            "StrideX"
+          ],
+          "communication_channels": [],
+          "notification_settings": null
+        },
+        "contact": {
+          "email": "sofia.rossi@example.it",
+          "phone": null,
+          "addresses": [
+            {
+              "type": "home",
+              "city": "Milan",
+              "state": "MI",
+              "geo": {
+                "latitude": 45.4642,
+                "longitude": 9.19
+              },
+              "tags": [
+                "primary"
+              ]
+            }
+          ]
+        }
+      },
+      "loyalty": {
+        "tier": "Bronze",
+        "points": 320,
+        "benefits": [
+          {
+            "benefit_id": "B-FS",
+            "name": "Free Shipping",
+            "rules": {
+              "min_spend": 75.0,
+              "categories": []
+            }
+          }
+        ]
+      }
+    },
+    "items": [
+      {
+        "item_id": "ORD-1005-I1",
+        "product": {
+          "product_id": "P103",
+          "name": "Trail Runner Shoes",
+          "category": "Footwear",
+          "brand": "StrideX",
+          "attributes": {
+            "material": "mesh",
+            "gender": "unisex"
+          },
+          "supplier": {
+            "name": "StrideX Asia",
+            "certifications": []
+          }
+        },
+        "quantity": 0,
+        "pricing": {
+          "unit_price": 89.0,
+          "discount": 0.0,
+          "tax": 0.0
+        },
+        "variants": [
+          {
+            "variant_id": "V-103-42",
+            "name": "EU 42",
+            "attributes": {
+              "size": "42",
+              "color": "Orange"
+            }
+          }
+        ],
+        "discounts": []
+      },
+      {
+        "item_id": "ORD-1005-I2",
+        "product": {
+          "product_id": "P107",
+          "name": "Yoga Mat Pro",
+          "category": "Sports",
+          "brand": "FlexFit",
+          "attributes": {
+            "thickness": "6mm",
+            "material": "TPE"
+          },
+          "supplier": {
+            "name": "FlexFit Co",
+            "certifications": [
+              {
+                "code": "REACH",
+                "expires": "2027-02-28"
+              }
+            ]
+          }
+        },
+        "quantity": 1,
+        "pricing": {
+          "unit_price": 45.0,
+          "discount": 0.0,
+          "tax": 3.6
+        },
+        "variants": null,
+        "discounts": null
+      }
+    ],
+    "payments": [
+      {
+        "payment_id": "PAY-1005-1",
+        "method": "card",
+        "amount": 48.6,
+        "status": "refunded",
+        "metadata": {
+          "network": "visa",
+          "last4": "1881",
+          "refund_id": "RF-77"
+        },
+        "attempts": [
+          {
+            "attempt_no": 1,
+            "result": "approved",
+            "gateway_response": null
+          }
+        ]
+      }
+    ],
+    "shipments": [],
+    "fees": {},
+    "labels": {
+      "fraud_flags": [
+        "address_mismatch"
+      ]
+    },
+    "audit_log": [
+      {
+        "ts": "2026-09-03T08:00:00Z",
+        "actor": "system",
+        "action": "created"
+      },
+      {
+        "ts": "2026-09-03T09:30:00Z",
+        "actor": "customer",
+        "action": "cancelled",
+        "reason": "customer_request"
+      }
+    ],
+    "metadata": {
+      "source": "web",
+      "cancel_reason": "changed_mind"
+    }
+  },
+  {
+    "order_id": "ORD-1006",
+    "order_date": "2026-09-03",
+    "order_status": "SHIPPED",
+    "customer": {
+      "customer_id": "C-2006",
+      "profile": {
+        "name": "Liam O'Connor",
+        "age": 52,
+        "preferences": {
+          "favorite_categories": [
+            "Electronics",
+            "Home & Kitchen",
+            "Books"
+          ],
+          "preferred_brands": [
+            "ViewMax",
+            "Zephyr",
+            "NovaTech"
+          ],
+          "communication_channels": [
+            "email",
+            "sms",
+            "push"
+          ],
+          "notification_settings": {
+            "promo": [
+              "push"
+            ],
+            "order_updates": [
+              "email",
+              "push",
+              "sms"
+            ],
+            "security": [
+              "email"
+            ]
+          }
+        },
+        "contact": {
+          "email": "liam.oconnor@example.ie",
+          "phone": "+353-85-555-0101",
+          "addresses": [
+            {
+              "type": "home",
+              "city": "Dublin",
+              "state": "D",
+              "geo": {
+                "latitude": 53.3498,
+                "longitude": -6.2603
+              },
+              "tags": [
+                "primary",
+                "house"
+              ]
+            },
+            {
+              "type": "work",
+              "city": "Cork",
+              "state": "CO",
+              "geo": {
+                "latitude": 51.8985,
+                "longitude": -8.4756
+              },
+              "tags": [
+                "office"
+              ]
+            }
+          ]
+        }
+      },
+      "loyalty": {
+        "tier": "Gold",
+        "points": 7800,
+        "benefits": [
+          {
+            "benefit_id": "B-FS",
+            "name": "Free Shipping",
+            "rules": {
+              "min_spend": 0.0,
+              "categories": []
+            }
+          },
+          {
+            "benefit_id": "B-EA",
+            "name": "Early Access",
+            "rules": {
+              "min_spend": null,
+              "categories": [
+                "Electronics",
+                "Books"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "items": [
+      {
+        "item_id": "ORD-1006-I1",
+        "product": {
+          "product_id": "P113",
+          "name": "4K Monitor 27in",
+          "category": "Electronics",
+          "brand": "ViewMax",
+          "attributes": {
+            "panel": "IPS",
+            "refresh": "144Hz"
+          },
+          "supplier": {
+            "name": "ViewMax Displays",
+            "certifications": [
+              {
+                "code": "TCO",
+                "expires": "2027-04-04"
+              }
+            ]
+          }
+        },
+        "quantity": 2,
+        "pricing": {
+          "unit_price": 349.0,
+          "discount": 104.7,
+          "tax": 47.46
+        },
+        "variants": [
+          {
+            "variant_id": "V-113-27",
+            "name": "27in",
+            "attributes": {
+              "size": "27in"
+            }
+          }
+        ],
+        "discounts": [
+          {
+            "discount_type": "PERCENT",
+            "code": "VIEW15",
+            "amount": 104.7,
+            "conditions": [
+              {
+                "condition_type": "min_quantity",
+                "value": "2"
+              },
+              {
+                "condition_type": "category",
+                "value": "Electronics"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item_id": "ORD-1006-I2",
+        "product": {
+          "product_id": "P110",
+          "name": "Gaming Mouse G7",
+          "category": "Electronics",
+          "brand": "Zephyr",
+          "attributes": {
+            "dpi": "16000",
+            "wireless": "false"
+          },
+          "supplier": {
+            "name": "Zephyr Peripherals",
+            "certifications": [
+              {
+                "code": "FCC",
+                "expires": "2028-05-05"
+              }
+            ]
+          }
+        },
+        "quantity": 1,
+        "pricing": {
+          "unit_price": 59.0,
+          "discount": 0.0,
+          "tax": 4.72
+        },
+        "variants": [
+          {
+            "variant_id": "V-110-BK",
+            "name": "Black",
+            "attributes": {
+              "color": "Black"
+            }
+          }
+        ],
+        "discounts": null
+      },
+      {
+        "item_id": "ORD-1006-I3",
+        "product": {
+          "product_id": "P106",
+          "name": "Smart Watch S2",
+          "category": "Electronics",
+          "brand": "NovaTech",
+          "attributes": {
+            "color": "Graphite",
+            "gps": "true",
+            "strap": "silicone"
+          },
+          "supplier": {
+            "name": "Nova Components Ltd",
+            "certifications": [
+              {
+                "code": "ISO9001",
+                "expires": "2027-03-01"
+              }
+            ]
+          }
+        },
+        "quantity": 1,
+        "pricing": {
+          "unit_price": 249.0,
+          "discount": 30.0,
+          "tax": 17.52
+        },
+        "variants": [
+          {
+            "variant_id": "V-106-GR",
+            "name": "Graphite / 44mm",
+            "attributes": {
+              "color": "Graphite",
+              "size": "44mm"
+            }
+          },
+          {
+            "variant_id": "V-106-SL",
+            "name": "Silicone strap",
+            "attributes": {
+              "strap": "silicone"
+            }
+          }
+        ],
+        "discounts": [
+          {
+            "discount_type": "FIXED",
+            "code": "WATCH30",
+            "amount": 30.0,
+            "conditions": []
+          }
+        ]
+      },
+      {
+        "item_id": "ORD-1006-I4",
+        "product": {
+          "product_id": "P109",
+          "name": "Hardcover Novel Bundle",
+          "category": "Books",
+          "brand": "PageTurn",
+          "attributes": {
+            "language": "EN",
+            "format": "hardcover"
+          },
+          "supplier": null
+        },
+        "quantity": 2,
+        "pricing": {
+          "unit_price": 24.99,
+          "discount": 0.0,
+          "tax": 4.0
+        },
+        "variants": null,
+        "discounts": []
+      },
+      {
+        "item_id": "ORD-1006-I5",
+        "product": {
+          "product_id": "P101",
+          "name": "UltraBook 14",
+          "category": "Electronics",
+          "brand": "NovaTech",
+          "attributes": {
+            "color": "Silver",
+            "ram": "16GB",
+            "storage": "512GB"
+          },
+          "supplier": {
+            "name": "Nova Components Ltd",
+            "certifications": [
+              {
+                "code": "ISO9001",
+                "expires": "2027-03-01"
+              },
+              {
+                "code": "RoHS",
+                "expires": "2026-12-31"
+              }
+            ]
+          }
+        },
+        "quantity": 1,
+        "pricing": {
+          "unit_price": 1199.0,
+          "discount": 119.9,
+          "tax": 86.33
+        },
+        "variants": [
+          {
+            "variant_id": "V-101-S16",
+            "name": "Silver / 16GB",
+            "attributes": {
+              "color": "Silver",
+              "ram": "16GB"
+            }
+          }
+        ],
+        "discounts": [
+          {
+            "discount_type": "PERCENT",
+            "code": "EDU10",
+            "amount": 119.9,
+            "conditions": [
+              {
+                "condition_type": "verification",
+                "value": "student"
+              },
+              {
+                "condition_type": "email_domain",
+                "value": "edu"
+              }
+            ]
+          },
+          {
+            "discount_type": "FIXED",
+            "code": "SHIPFREE",
+            "amount": 0.0,
+            "conditions": [
+              {
+                "condition_type": "region",
+                "value": "IE"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "payments": [
+      {
+        "payment_id": "PAY-1006-1",
+        "method": "card",
+        "amount": 1500.0,
+        "status": "captured",
+        "metadata": {
+          "network": "amex",
+          "last4": "1005"
+        },
+        "attempts": [
+          {
+            "attempt_no": 1,
+            "result": "approved",
+            "gateway_response": {
+              "code": "00"
+            }
+          }
+        ]
+      },
+      {
+        "payment_id": "PAY-1006-2",
+        "method": "paypal",
+        "amount": 684.81,
+        "status": "captured",
+        "metadata": {
+          "payer_id": "PP-5521",
+          "country": "IE"
+        },
+        "attempts": null
+      }
+    ],
+    "shipments": [
+      {
+        "shipment_id": "SHP-1006-1",
+        "carrier": "UPS",
+        "tracking": "1Z999AA10123456784",
+        "packages": [
+          {
+            "package_id": "PKG-1006-1-1",
+            "weight": 11.5,
+            "dimensions": {
+              "length": 70.0,
+              "width": 45.0,
+              "height": 25.0
+            },
+            "contents": [
+              {
+                "item_id": "ORD-1006-I1",
+                "qty": 2
+              }
+            ]
+          },
+          {
+            "package_id": "PKG-1006-1-2",
+            "weight": 2.2,
+            "dimensions": {
+              "length": 30.0,
+              "width": 25.0,
+              "height": 15.0
+            },
+            "contents": [
+              {
+                "item_id": "ORD-1006-I2",
+                "qty": 1
+              },
+              {
+                "item_id": "ORD-1006-I3",
+                "qty": 1
+              },
+              {
+                "item_id": "ORD-1006-I4",
+                "qty": 2
+              }
+            ]
+          }
+        ],
+        "events": [
+          {
+            "timestamp": "2026-09-04T07:30:00Z",
+            "status": "picked_up",
+            "location": {
+              "city": "Dublin",
+              "country": "IE"
+            }
+          },
+          {
+            "timestamp": "2026-09-05T13:00:00Z",
+            "status": "in_transit",
+            "location": {
+              "city": "Cork",
+              "country": "IE"
+            }
+          }
+        ]
+      },
+      {
+        "shipment_id": "SHP-1006-2",
+        "carrier": "DHL",
+        "tracking": null,
+        "packages": [
+          {
+            "package_id": "PKG-1006-2-1",
+            "weight": 2.4,
+            "dimensions": {
+              "length": 40.0,
+              "width": 30.0,
+              "height": 8.0
+            },
+            "contents": [
+              {
+                "item_id": "ORD-1006-I5",
+                "qty": 1
+              }
+            ]
+          }
+        ],
+        "events": []
+      }
+    ],
+    "fees": {
+      "shipping": {
+        "amount": 14.9,
+        "taxable": false
+      },
+      "insurance": {
+        "amount": 9.5,
+        "taxable": false
+      }
+    },
+    "labels": {
+      "warehouse": [
+        "WH-EU1",
+        "WH-EU2"
+      ],
+      "fraud_flags": [
+        "high_value"
+      ]
+    },
+    "audit_log": [
+      {
+        "ts": "2026-09-03T14:00:00Z",
+        "actor": "system",
+        "action": "created"
+      },
+      {
+        "ts": "2026-09-03T14:02:00Z",
+        "actor": "gateway",
+        "action": "paid"
+      },
+      {
+        "ts": "2026-09-03T15:00:00Z",
+        "actor": "fraud",
+        "action": "reviewed",
+        "result": "pass"
+      },
+      {
+        "ts": "2026-09-04T07:30:00Z",
+        "actor": "wms",
+        "action": "shipped",
+        "carrier": "UPS"
+      }
+    ],
+    "metadata": {
+      "source": "web",
+      "device": "desktop",
+      "campaign": null
+    }
+  },
+  {
+    "order_id": "ORD-1007",
+    "order_date": "2026-09-04",
+    "order_status": "Pending",
+    "customer": {
+      "customer_id": "C-2007",
+      "profile": {
+        "name": "Priya Nair",
+        "age": 23,
+        "preferences": {
+          "favorite_categories": [
+            "Apparel",
+            "Health"
+          ],
+          "preferred_brands": [
+            "GreenLoom",
+            "MuscleLab"
+          ],
+          "communication_channels": [
+            "sms"
+          ],
+          "notification_settings": {
+            "promo": [
+              "sms"
+            ]
+          }
+        },
+        "contact": {
+          "email": "priya.nair@example.com",
+          "phone": "+91-90000-11122",
+          "addresses": [
+            {
+              "type": "home",
+              "city": "Kochi",
+              "state": "KL",
+              "geo": {
+                "latitude": 9.9312,
+                "longitude": 76.2673
+              },
+              "tags": [
+                "primary"
+              ]
+            }
+          ]
+        }
+      },
+      "loyalty": {
+        "tier": "Silver",
+        "points": 980,
+        "benefits": [
+          {
+            "benefit_id": "B-FS",
+            "name": "Free Shipping",
+            "rules": {
+              "min_spend": 50.0,
+              "categories": [
+                "Apparel"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "items": [
+      {
+        "item_id": "ORD-1007-I1",
+        "product": {
+          "product_id": "P104",
+          "name": "Organic Cotton Tee",
+          "category": "Apparel",
+          "brand": "GreenLoom",
+          "attributes": {
+            "material": "cotton",
+            "fit": "regular"
+          },
+          "supplier": {
+            "name": "GreenLoom Textiles",
+            "certifications": [
+              {
+                "code": "GOTS",
+                "expires": "2026-11-30"
+              },
+              {
+                "code": "OEKO-TEX",
+                "expires": "2027-06-30"
+              }
+            ]
+          }
+        },
+        "quantity": 3,
+        "pricing": {
+          "unit_price": 24.0,
+          "discount": 9.0,
+          "tax": 5.04
+        },
+        "variants": [
+          {
+            "variant_id": "V-104-BK-S",
+            "name": "Black / S",
+            "attributes": {
+              "color": "Black",
+              "size": "S"
+            }
+          },
+          {
+            "variant_id": "V-104-BK-M",
+            "name": "Black / M",
+            "attributes": {
+              "color": "Black",
+              "size": "M"
+            }
+          }
+        ],
+        "discounts": [
+          {
+            "discount_type": "BULK",
+            "code": "TEE3",
+            "amount": 9.0,
+            "conditions": [
+              {
+                "condition_type": "min_quantity",
+                "value": "3"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item_id": "ORD-1007-I2",
+        "product": {
+          "product_id": "P112",
+          "name": "Protein Powder 2kg",
+          "category": "Health",
+          "brand": "MuscleLab",
+          "attributes": {
+            "flavor": "Chocolate",
+            "vegan": "false"
+          },
+          "supplier": {
+            "name": "MuscleLab Foods",
+            "certifications": [
+              {
+                "code": "GMP",
+                "expires": "2026-12-01"
+              }
+            ]
+          }
+        },
+        "quantity": 1,
+        "pricing": {
+          "unit_price": 54.0,
+          "discount": 0.0,
+          "tax": 4.32
+        },
+        "variants": null,
+        "discounts": null
+      }
+    ],
+    "payments": [
+      {
+        "payment_id": "PAY-1007-1",
+        "method": "upi",
+        "amount": 129.35,
+        "status": "pending",
+        "metadata": {
+          "vpa": "priya@oksbi"
+        },
+        "attempts": []
+      }
+    ],
+    "shipments": [],
+    "fees": {
+      "shipping": {
+        "amount": 2.99,
+        "taxable": false
+      }
+    },
+    "labels": {},
+    "audit_log": [
+      {
+        "ts": "2026-09-04T09:00:00Z",
+        "actor": "system",
+        "action": "created"
+      }
+    ],
+    "metadata": {
+      "source": "app",
+      "device": "android",
+      "ingest_batch": "B-0904-1"
+    }
+  },
+  {
+    "order_id": "ORD-1008",
+    "order_date": "2026-09-05",
+    "order_status": "delivered",
+    "customer": {
+      "customer_id": "C-2008",
+      "profile": {
+        "name": "Chen Wei",
+        "age": 36,
+        "preferences": {
+          "favorite_categories": [
+            "Electronics"
+          ],
+          "preferred_brands": [
+            "Zephyr",
+            "NovaTech"
+          ],
+          "communication_channels": [
+            "email"
+          ],
+          "notification_settings": {
+            "order_updates": [
+              "email"
+            ]
+          }
+        },
+        "contact": {
+          "email": "chen.wei@example.cn",
+          "phone": "+86-138-0000-1111",
+          "addresses": [
+            {
+              "type": "home",
+              "city": "Shanghai",
+              "state": "SH",
+              "geo": {
+                "latitude": 31.2304,
+                "longitude": 121.4737
+              },
+              "tags": [
+                "primary"
+              ]
+            },
+            {
+              "type": "home",
+              "city": "Shanghai",
+              "state": "SH",
+              "geo": {
+                "latitude": 31.2304,
+                "longitude": 121.4737
+              },
+              "tags": [
+                "primary"
+              ]
+            }
+          ]
+        }
+      },
+      "loyalty": {
+        "tier": "GOLD",
+        "points": 6100,
+        "benefits": [
+          {
+            "benefit_id": "B-FS",
+            "name": "Free Shipping",
+            "rules": {
+              "min_spend": 0.0,
+              "categories": []
+            }
+          }
+        ]
+      }
+    },
+    "items": [
+      {
+        "item_id": "ORD-1008-I1",
+        "product": {
+          "product_id": "P110",
+          "name": "Gaming Mouse G7",
+          "category": "Electronics",
+          "brand": "Zephyr",
+          "attributes": {
+            "dpi": "16000",
+            "wireless": "false"
+          },
+          "supplier": {
+            "name": "Zephyr Peripherals",
+            "certifications": [
+              {
+                "code": "FCC",
+                "expires": "2028-05-05"
+              }
+            ]
+          }
+        },
+        "quantity": 2,
+        "pricing": {
+          "unit_price": 59.0,
+          "discount": 20.0,
+          "tax": 7.84
+        },
+        "variants": [
+          {
+            "variant_id": "V-110-BK",
+            "name": "Black",
+            "attributes": {
+              "color": "Black"
+            }
+          },
+          {
+            "variant_id": "V-110-WH",
+            "name": "White",
+            "attributes": {
+              "color": "White"
+            }
+          }
+        ],
+        "discounts": [
+          {
+            "discount_type": "FIXED",
+            "code": "MOUSE10",
+            "amount": 10.0,
+            "conditions": [
+              {
+                "condition_type": "min_quantity",
+                "value": "2"
+              }
+            ]
+          },
+          {
+            "discount_type": "FIXED",
+            "code": "MOUSE10",
+            "amount": 10.0,
+            "conditions": [
+              {
+                "condition_type": "min_quantity",
+                "value": "2"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "payments": [
+      {
+        "payment_id": "PAY-1008-1",
+        "method": "alipay",
+        "amount": 105.84,
+        "status": "captured",
+        "metadata": {
+          "account": "cw***@example.cn"
+        },
+        "attempts": [
+          {
+            "attempt_no": 1,
+            "result": "approved",
+            "gateway_response": {
+              "code": "OK"
+            }
+          }
+        ]
+      }
+    ],
+    "shipments": [
+      {
+        "shipment_id": "SHP-1008-1",
+        "carrier": "SF Express",
+        "tracking": "SF1234567",
+        "packages": [
+          {
+            "package_id": "PKG-1008-1-1",
+            "weight": 0.6,
+            "dimensions": {
+              "length": 18.0,
+              "width": 12.0,
+              "height": 6.0
+            },
+            "contents": [
+              {
+                "item_id": "ORD-1008-I1",
+                "qty": 2
+              }
+            ]
+          }
+        ],
+        "events": [
+          {
+            "timestamp": "2026-09-06T07:00:00Z",
+            "status": "picked_up",
+            "location": {
+              "city": "Shanghai",
+              "country": "CN"
+            }
+          },
+          {
+            "timestamp": "2026-09-07T12:00:00Z",
+            "status": "delivered",
+            "location": {
+              "city": "Shanghai",
+              "country": "CN"
+            }
+          }
+        ]
+      }
+    ],
+    "fees": {
+      "shipping": {
+        "amount": 0.0,
+        "taxable": false
+      }
+    },
+    "labels": {
+      "warehouse": [
+        "WH-CN1"
+      ]
+    },
+    "audit_log": [],
+    "metadata": {
+      "source": "app",
+      "device": "ios"
+    }
+  },
+  {
+    "order_id": "ORD-1009",
+    "order_date": "2026-09-05",
+    "order_status": "Shipped",
+    "customer": {
+      "customer_id": "C-2009",
+      "profile": {
+        "name": "Fatima Khan",
+        "age": 31,
+        "preferences": {
+          "favorite_categories": [
+            "Home & Kitchen",
+            "Books"
+          ],
+          "preferred_brands": [
+            "PageTurn",
+            "Lumo"
+          ],
+          "communication_channels": [
+            "email",
+            "push"
+          ],
+          "notification_settings": {
+            "promo": [
+              "email"
+            ],
+            "order_updates": []
+          }
+        },
+        "contact": {
+          "email": "fatima.khan@example.ae",
+          "phone": "+971-50-123-4567",
+          "addresses": [
+            {
+              "type": "home",
+              "city": "Dubai",
+              "state": "DU",
+              "geo": {
+                "latitude": 25.2048,
+                "longitude": 55.2708
+              },
+              "tags": [
+                "primary",
+                "apartment"
+              ]
+            },
+            {
+              "type": "work",
+              "city": "Abu Dhabi",
+              "state": "AZ",
+              "geo": {
+                "latitude": 24.4539,
+                "longitude": 54.3773
+              },
+              "tags": [
+                "office"
+              ]
+            }
+          ]
+        }
+      },
+      "loyalty": {
+        "tier": "Silver",
+        "points": 1450,
+        "benefits": []
+      }
+    },
+    "items": [
+      {
+        "item_id": "ORD-1009-I1",
+        "product": {
+          "product_id": "P108",
+          "name": "Espresso Maker",
+          "category": "Home & Kitchen",
+          "brand": "BrewMaster",
+          "attributes": {
+            "pressure": "15bar",
+            "color": "Red"
+          },
+          "supplier": {
+            "name": "BrewMaster Italia",
+            "certifications": [
+              {
+                "code": "CE",
+                "expires": "2027-09-09"
+              },
+              {
+                "code": "UL",
+                "expires": "2026-10-01"
+              }
+            ]
+          }
+        },
+        "quantity": 1,
+        "pricing": {
+          "unit_price": 129.0,
+          "discount": 18.0,
+          "tax": 8.88
+        },
+        "variants": [
+          {
+            "variant_id": "V-108-BK",
+            "name": "Black",
+            "attributes": {
+              "color": "Black"
+            }
+          }
+        ],
+        "discounts": [
+          {
+            "discount_type": "PERCENT",
+            "code": "RAMADAN10",
+            "amount": 12.9,
+            "conditions": [
+              {
+                "condition_type": "campaign",
+                "value": "RAMADAN"
+              },
+              {
+                "condition_type": "category",
+                "value": "Home & Kitchen"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item_id": "ORD-1009-I2",
+        "product": {
+          "product_id": "P109",
+          "name": "Hardcover Novel Bundle",
+          "category": "Books",
+          "brand": "PageTurn",
+          "attributes": {
+            "language": "EN",
+            "format": "hardcover"
+          },
+          "supplier": null
+        },
+        "quantity": 3,
+        "pricing": {
+          "unit_price": 24.99,
+          "discount": null,
+          "tax": 6.0
+        },
+        "variants": null,
+        "discounts": null
+      },
+      {
+        "item_id": "ORD-1009-I3",
+        "product": {
+          "product_id": "P114",
+          "name": "Scented Candle Set",
+          "category": "Home & Kitchen",
+          "brand": "Lumo",
+          "attributes": {
+            "scent": "Lavender"
+          },
+          "supplier": null
+        },
+        "quantity": 2,
+        "pricing": {
+          "unit_price": 18.5,
+          "discount": 0.0,
+          "tax": 2.96
+        },
+        "variants": [
+          {
+            "variant_id": "V-114-LV",
+            "name": "Lavender",
+            "attributes": {
+              "scent": "Lavender"
+            }
+          }
+        ],
+        "discounts": []
+      }
+    ],
+    "payments": [
+      {
+        "payment_id": "PAY-1009-1",
+        "method": "card",
+        "amount": 246.81,
+        "status": "captured",
+        "metadata": {
+          "network": "visa",
+          "last4": "7788"
+        },
+        "attempts": [
+          {
+            "attempt_no": 1,
+            "result": "approved",
+            "gateway_response": {
+              "code": "00"
+            }
+          }
+        ]
+      }
+    ],
+    "shipments": [
+      {
+        "shipment_id": "SHP-1009-1",
+        "carrier": "Aramex",
+        "tracking": "ARX55001",
+        "packages": [
+          {
+            "package_id": "PKG-1009-1-1",
+            "weight": 2.9,
+            "dimensions": {
+              "length": 32.0,
+              "width": 28.0,
+              "height": 22.0
+            },
+            "contents": [
+              {
+                "item_id": "ORD-1009-I1",
+                "qty": 1
+              }
+            ]
+          },
+          {
+            "package_id": "PKG-1009-1-2",
+            "weight": 1.5,
+            "dimensions": {
+              "length": 25.0,
+              "width": 20.0,
+              "height": 15.0
+            },
+            "contents": [
+              {
+                "item_id": "ORD-1009-I2",
+                "qty": 3
+              },
+              {
+                "item_id": "ORD-1009-I3",
+                "qty": 2
+              }
+            ]
+          }
+        ],
+        "events": [
+          {
+            "timestamp": "2026-09-06T05:30:00Z",
+            "status": "picked_up",
+            "location": {
+              "city": "Dubai",
+              "country": "AE"
+            }
+          },
+          {
+            "timestamp": "2026-09-06T15:00:00Z",
+            "status": "out_for_delivery",
+            "location": {
+              "city": "Abu Dhabi",
+              "country": "AE"
+            }
+          }
+        ]
+      }
+    ],
+    "fees": {
+      "shipping": {
+        "amount": 6.0,
+        "taxable": false
+      },
+      "gift_wrap": {
+        "amount": 0.0,
+        "taxable": true
+      }
+    },
+    "labels": {
+      "warehouse": [
+        "WH-GCC"
+      ]
+    },
+    "audit_log": [
+      {
+        "ts": "2026-09-05T18:00:00Z",
+        "actor": "system",
+        "action": "created"
+      },
+      {
+        "ts": "2026-09-06T05:30:00Z",
+        "actor": "wms",
+        "action": "shipped"
+      }
+    ],
+    "metadata": {
+      "source": "web",
+      "device": "desktop"
+    }
+  },
+  {
+    "order_id": "ORD-1010",
+    "order_date": "2026-09-06",
+    "order_status": "DELIVERED",
+    "customer": {
+      "customer_id": "C-2010",
+      "profile": {
+        "name": "Noah Williams",
+        "age": 45,
+        "preferences": {
+          "favorite_categories": [
+            "Sports",
+            "Electronics",
+            "Health"
+          ],
+          "preferred_brands": [
+            "FlexFit",
+            "ViewMax"
+          ],
+          "communication_channels": [
+            "email",
+            "sms"
+          ],
+          "notification_settings": {
+            "promo": [
+              "email"
+            ],
+            "order_updates": [
+              "sms"
+            ]
+          }
+        },
+        "contact": {
+          "email": "noah.w@example.com",
+          "phone": "+1-415-555-0133",
+          "addresses": [
+            {
+              "type": "home",
+              "city": "San Francisco",
+              "state": "CA",
+              "geo": {
+                "latitude": 37.7749,
+                "longitude": -122.4194
+              },
+              "tags": [
+                "primary"
+              ]
+            },
+            {
+              "type": "work",
+              "city": "Oakland",
+              "state": "CA",
+              "geo": {
+                "latitude": 37.8044,
+                "longitude": -122.2712
+              },
+              "tags": null
+            },
+            {
+              "type": "vacation",
+              "city": "Lake Tahoe",
+              "state": "CA",
+              "geo": {
+                "latitude": 39.0968,
+                "longitude": -120.0324
+              },
+              "tags": [
+                "seasonal"
+              ]
+            }
+          ]
+        }
+      },
+      "loyalty": {
+        "tier": "Platinum",
+        "points": 22100,
+        "benefits": [
+          {
+            "benefit_id": "B-FS",
+            "name": "Free Shipping",
+            "rules": {
+              "min_spend": 0.0,
+              "categories": []
+            }
+          },
+          {
+            "benefit_id": "B-DP",
+            "name": "Double Points",
+            "rules": {
+              "min_spend": 100.0,
+              "categories": [
+                "Sports",
+                "Health"
+              ]
+            }
+          },
+          {
+            "benefit_id": "B-CS",
+            "name": "Concierge Support",
+            "rules": null
+          }
+        ]
+      }
+    },
+    "items": [
+      {
+        "item_id": "ORD-1010-I1",
+        "product": {
+          "product_id": "P107",
+          "name": "Yoga Mat Pro",
+          "category": "Sports",
+          "brand": "FlexFit",
+          "attributes": {
+            "thickness": "6mm",
+            "material": "TPE"
+          },
+          "supplier": {
+            "name": "FlexFit Co",
+            "certifications": [
+              {
+                "code": "REACH",
+                "expires": "2027-02-28"
+              }
+            ]
+          }
+        },
+        "quantity": 2,
+        "pricing": {
+          "unit_price": 45.0,
+          "discount": 14.0,
+          "tax": 6.08
+        },
+        "variants": [
+          {
+            "variant_id": "V-107-GN",
+            "name": "Green / 6mm",
+            "attributes": {
+              "color": "Green",
+              "thickness": "6mm"
+            }
+          }
+        ],
+        "discounts": [
+          {
+            "discount_type": "PERCENT",
+            "code": "FIT10",
+            "amount": 9.0,
+            "conditions": [
+              {
+                "condition_type": "category",
+                "value": "Sports"
+              }
+            ]
+          },
+          {
+            "discount_type": "LOYALTY",
+            "code": "PLAT-EXTRA",
+            "amount": 5.0,
+            "conditions": [
+              {
+                "condition_type": "customer_tier",
+                "value": "Platinum"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item_id": "ORD-1010-I2",
+        "product": {
+          "product_id": "P112",
+          "name": "Protein Powder 2kg",
+          "category": "Health",
+          "brand": "MuscleLab",
+          "attributes": {
+            "flavor": "Chocolate",
+            "vegan": "false"
+          },
+          "supplier": {
+            "name": "MuscleLab Foods",
+            "certifications": [
+              {
+                "code": "GMP",
+                "expires": "2026-12-01"
+              }
+            ]
+          }
+        },
+        "quantity": 2,
+        "pricing": {
+          "unit_price": 54.0,
+          "discount": 15.0,
+          "tax": 7.44
+        },
+        "variants": null,
+        "discounts": [
+          {
+            "discount_type": "BULK",
+            "code": "PROTEIN2",
+            "amount": 15.0,
+            "conditions": [
+              {
+                "condition_type": "min_quantity",
+                "value": "2"
+              },
+              {
+                "condition_type": "category",
+                "value": "Health"
+              },
+              {
+                "condition_type": "brand",
+                "value": "MuscleLab"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item_id": "ORD-1010-I3",
+        "product": {
+          "product_id": "P113",
+          "name": "4K Monitor 27in",
+          "category": "Electronics",
+          "brand": "ViewMax",
+          "attributes": {
+            "panel": "IPS",
+            "refresh": "144Hz"
+          },
+          "supplier": {
+            "name": "ViewMax Displays",
+            "certifications": [
+              {
+                "code": "TCO",
+                "expires": "2027-04-04"
+              }
+            ]
+          }
+        },
+        "quantity": 1,
+        "pricing": {
+          "unit_price": 349.0,
+          "discount": 0.0,
+          "tax": 27.92
+        },
+        "variants": [
+          {
+            "variant_id": "V-113-27",
+            "name": "27in",
+            "attributes": {
+              "size": "27in"
+            }
+          }
+        ],
+        "discounts": null
+      },
+      {
+        "item_id": "ORD-1010-I4",
+        "product": {
+          "product_id": "P102",
+          "name": "Noise-Cancel Headphones",
+          "category": "Electronics",
+          "brand": "SonicWave",
+          "attributes": {
+            "color": "Black",
+            "bluetooth": "5.3",
+            "anc": "true"
+          },
+          "supplier": {
+            "name": "SonicWave Mfg",
+            "certifications": [
+              {
+                "code": "CE",
+                "expires": "2028-01-15"
+              }
+            ]
+          }
+        },
+        "quantity": 1,
+        "pricing": {
+          "unit_price": 199.0,
+          "discount": 20.0,
+          "tax": 14.32
+        },
+        "variants": [
+          {
+            "variant_id": "V-102-WH",
+            "name": "White",
+            "attributes": {
+              "color": "White"
+            }
+          },
+          {
+            "variant_id": "V-102-WH-CASE",
+            "name": "Hard case",
+            "attributes": {
+              "accessory": "case"
+            }
+          }
+        ],
+        "discounts": [
+          {
+            "discount_type": "FIXED",
+            "code": "MUSIC20",
+            "amount": 20.0,
+            "conditions": null
+          }
+        ]
+      }
+    ],
+    "payments": [
+      {
+        "payment_id": "PAY-1010-1",
+        "method": "card",
+        "amount": 564.76,
+        "status": "captured",
+        "metadata": {
+          "network": "visa",
+          "last4": "3030",
+          "wallet": "apple_pay"
+        },
+        "attempts": [
+          {
+            "attempt_no": 1,
+            "result": "approved",
+            "gateway_response": {
+              "code": "00",
+              "avs": "Y"
+            }
+          }
+        ]
+      },
+      {
+        "payment_id": "PAY-1010-2",
+        "method": "gift_card",
+        "amount": 150.0,
+        "status": "captured",
+        "metadata": {
+          "card_no": "GC-1203"
+        },
+        "attempts": null
+      },
+      {
+        "payment_id": "PAY-1010-3",
+        "method": "store_credit",
+        "amount": 50.0,
+        "status": "captured",
+        "metadata": {},
+        "attempts": null
+      }
+    ],
+    "shipments": [
+      {
+        "shipment_id": "SHP-1010-1",
+        "carrier": "FedEx",
+        "tracking": "FX7001",
+        "packages": [
+          {
+            "package_id": "PKG-1010-1-1",
+            "weight": 1.4,
+            "dimensions": {
+              "length": 60.0,
+              "width": 20.0,
+              "height": 6.0
+            },
+            "contents": [
+              {
+                "item_id": "ORD-1010-I1",
+                "qty": 2
+              }
+            ]
+          },
+          {
+            "package_id": "PKG-1010-1-2",
+            "weight": 2.6,
+            "dimensions": {
+              "length": 30.0,
+              "width": 25.0,
+              "height": 20.0
+            },
+            "contents": [
+              {
+                "item_id": "ORD-1010-I2",
+                "qty": 2
+              }
+            ]
+          }
+        ],
+        "events": [
+          {
+            "timestamp": "2026-09-07T03:00:00Z",
+            "status": "picked_up",
+            "location": {
+              "city": "Oakland",
+              "country": "US"
+            }
+          },
+          {
+            "timestamp": "2026-09-08T10:00:00Z",
+            "status": "in_transit",
+            "location": {
+              "city": "Sacramento",
+              "country": "US"
+            }
+          },
+          {
+            "timestamp": "2026-09-09T18:00:00Z",
+            "status": "delivered",
+            "location": {
+              "city": "San Francisco",
+              "country": "US"
+            }
+          }
+        ]
+      },
+      {
+        "shipment_id": "SHP-1010-2",
+        "carrier": "USPS",
+        "tracking": "9400111899223344556677",
+        "packages": [
+          {
+            "package_id": "PKG-1010-2-1",
+            "weight": 0.5,
+            "dimensions": {
+              "length": 20.0,
+              "width": 15.0,
+              "height": 8.0
+            },
+            "contents": [
+              {
+                "item_id": "ORD-1010-I4",
+                "qty": 1
+              }
+            ]
+          },
+          {
+            "package_id": "PKG-1010-2-2",
+            "weight": 8.9,
+            "dimensions": {
+              "length": 75.0,
+              "width": 48.0,
+              "height": 18.0
+            },
+            "contents": [
+              {
+                "item_id": "ORD-1010-I3",
+                "qty": 1
+              }
+            ]
+          }
+        ],
+        "events": [
+          {
+            "timestamp": "2026-09-07T04:00:00Z",
+            "status": "picked_up",
+            "location": {
+              "city": "Oakland",
+              "country": "US"
+            }
+          },
+          {
+            "timestamp": "2026-09-10T09:00:00Z",
+            "status": "delivered",
+            "location": {
+              "city": "San Francisco",
+              "country": "US"
+            }
+          }
+        ]
+      }
+    ],
+    "fees": {
+      "shipping": {
+        "amount": 0.0,
+        "taxable": false
+      },
+      "expedite": {
+        "amount": 12.0,
+        "taxable": true
+      }
+    },
+    "labels": {
+      "warehouse": [
+        "WH-US-W",
+        "WH-US-W2"
+      ],
+      "fraud_flags": []
+    },
+    "audit_log": [
+      {
+        "ts": "2026-09-06T09:00:00Z",
+        "actor": "system",
+        "action": "created"
+      },
+      {
+        "ts": "2026-09-06T09:01:00Z",
+        "actor": "gateway",
+        "action": "paid"
+      },
+      {
+        "ts": "2026-09-07T03:00:00Z",
+        "actor": "wms",
+        "action": "shipped"
+      },
+      {
+        "ts": "2026-09-10T09:00:00Z",
+        "actor": "carrier",
+        "action": "delivered"
+      }
+    ],
+    "metadata": {
+      "source": "web",
+      "device": "desktop",
+      "campaign": "LABOR-DAY"
+    }
+  },
+  {
+    "order_id": "ORD-1011",
+    "order_date": "2026-09-06",
+    "order_status": "returned",
+    "customer": {
+      "customer_id": "C-2011",
+      "profile": {
+        "name": "Isabella García",
+        "age": 38,
+        "preferences": {
+          "favorite_categories": [
+            "Apparel",
+            "Footwear"
+          ],
+          "preferred_brands": [
+            "Urban&Co",
+            "StrideX"
+          ],
+          "communication_channels": [
+            "push",
+            "email"
+          ],
+          "notification_settings": {
+            "promo": [
+              "push",
+              "email"
+            ]
+          }
+        },
+        "contact": {
+          "email": "isabella.garcia@example.es",
+          "phone": null,
+          "addresses": [
+            {
+              "type": "home",
+              "city": "Madrid",
+              "state": "M",
+              "geo": {
+                "latitude": 40.4168,
+                "longitude": -3.7038
+              },
+              "tags": [
+                "primary"
+              ]
+            }
+          ]
+        }
+      },
+      "loyalty": {
+        "tier": "Bronze",
+        "points": 150,
+        "benefits": []
+      }
+    },
+    "items": [
+      {
+        "item_id": "ORD-1011-I1",
+        "product": {
+          "product_id": "P111",
+          "name": "Denim Jacket",
+          "category": "Apparel",
+          "brand": "Urban&Co",
+          "attributes": {
+            "material": "denim",
+            "fit": "slim"
+          },
+          "supplier": null
+        },
+        "quantity": 1,
+        "pricing": {
+          "unit_price": 79.0,
+          "discount": 0.0,
+          "tax": 6.32
+        },
+        "variants": [
+          {
+            "variant_id": "V-111-M",
+            "name": "M / Indigo",
+            "attributes": {
+              "size": "M",
+              "color": "Indigo"
+            }
+          }
+        ],
+        "discounts": null
+      },
+      {
+        "item_id": "ORD-1011-I2",
+        "product": {
+          "product_id": "P103",
+          "name": "Trail Runner Shoes",
+          "category": "Footwear",
+          "brand": "StrideX",
+          "attributes": {
+            "material": "mesh",
+            "gender": "unisex"
+          },
+          "supplier": {
+            "name": "StrideX Asia",
+            "certifications": []
+          }
+        },
+        "quantity": 1,
+        "pricing": {
+          "unit_price": 89.0,
+          "discount": 13.35,
+          "tax": 6.05
+        },
+        "variants": [
+          {
+            "variant_id": "V-103-38",
+            "name": "EU 38",
+            "attributes": {
+              "size": "38",
+              "color": "White"
+            }
+          },
+          {
+            "variant_id": "V-103-39",
+            "name": "EU 39",
+            "attributes": {
+              "size": "39",
+              "color": "White"
+            }
+          }
+        ],
+        "discounts": [
+          {
+            "discount_type": "PERCENT",
+            "code": "RUN15",
+            "amount": 13.35,
+            "conditions": [
+              {
+                "condition_type": "category",
+                "value": "Footwear"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "payments": [
+      {
+        "payment_id": "PAY-1011-1",
+        "method": "card",
+        "amount": 171.52,
+        "status": "refunded",
+        "metadata": {
+          "network": "mastercard",
+          "last4": "5599",
+          "refund_id": "RF-90"
+        },
+        "attempts": [
+          {
+            "attempt_no": 1,
+            "result": "approved",
+            "gateway_response": {
+              "code": "00"
+            }
+          }
+        ]
+      }
+    ],
+    "shipments": [
+      {
+        "shipment_id": "SHP-1011-1",
+        "carrier": "Correos",
+        "tracking": "CO88221",
+        "packages": [
+          {
+            "package_id": "PKG-1011-1-1",
+            "weight": 1.3,
+            "dimensions": {
+              "length": 35.0,
+              "width": 25.0,
+              "height": 10.0
+            },
+            "contents": [
+              {
+                "item_id": "ORD-1011-I1",
+                "qty": 1
+              },
+              {
+                "item_id": "ORD-1011-I2",
+                "qty": 1
+              }
+            ]
+          }
+        ],
+        "events": [
+          {
+            "timestamp": "2026-09-07T08:00:00Z",
+            "status": "picked_up",
+            "location": {
+              "city": "Madrid",
+              "country": "ES"
+            }
+          },
+          {
+            "timestamp": "2026-09-09T13:00:00Z",
+            "status": "delivered",
+            "location": {
+              "city": "Madrid",
+              "country": "ES"
+            }
+          },
+          {
+            "timestamp": "2026-09-12T10:00:00Z",
+            "status": "return_initiated",
+            "location": {
+              "city": "Madrid",
+              "country": "ES"
+            }
+          },
+          {
+            "timestamp": "2026-09-14T16:00:00Z",
+            "status": "returned_to_warehouse",
+            "location": {
+              "city": "Valencia",
+              "country": "ES"
+            }
+          }
+        ]
+      }
+    ],
+    "fees": {
+      "shipping": {
+        "amount": 4.5,
+        "taxable": false
+      }
+    },
+    "labels": {
+      "warehouse": [
+        "WH-ES1"
+      ]
+    },
+    "audit_log": [
+      {
+        "ts": "2026-09-06T20:00:00Z",
+        "actor": "system",
+        "action": "created"
+      },
+      {
+        "ts": "2026-09-12T10:00:00Z",
+        "actor": "customer",
+        "action": "return_requested"
+      }
+    ],
+    "metadata": {
+      "source": "app",
+      "device": "ios",
+      "return_reason": "wrong_size"
+    }
+  },
+  {
+    "order_id": "ORD-1012",
+    "order_date": "2026-09-07",
+    "order_status": "Pending",
+    "customer": {
+      "customer_id": "C-2012",
+      "profile": {
+        "name": "Omar Haddad",
+        "age": null,
+        "preferences": {
+          "favorite_categories": [],
+          "preferred_brands": [],
+          "communication_channels": [],
+          "notification_settings": {}
+        },
+        "contact": {
+          "email": "omar.haddad@example.com",
+          "phone": null,
+          "addresses": null
+        }
+      },
+      "loyalty": null
+    },
+    "items": [
+      {
+        "item_id": "ORD-1012-I1",
+        "product": {
+          "product_id": "P105",
+          "name": "Stainless Water Bottle",
+          "category": "Home & Kitchen",
+          "brand": "HydroPeak",
+          "attributes": {},
+          "supplier": null
+        },
+        "quantity": 2,
+        "pricing": {
+          "unit_price": 22.5,
+          "discount": 0.0,
+          "tax": 3.6
+        },
+        "variants": [],
+        "discounts": null
+      },
+      {
+        "item_id": "ORD-1012-I2",
+        "product": {
+          "product_id": "P114",
+          "name": "Scented Candle Set",
+          "category": "Home & Kitchen",
+          "brand": "Lumo",
+          "attributes": {
+            "scent": "Lavender"
+          },
+          "supplier": null
+        },
+        "quantity": 1,
+        "pricing": {
+          "unit_price": 18.5,
+          "discount": 0.0,
+          "tax": 1.48
+        },
+        "variants": null,
+        "discounts": []
+      },
+      {
+        "item_id": "ORD-1012-I3",
+        "product": {
+          "product_id": "P109",
+          "name": "Hardcover Novel Bundle",
+          "category": "Books",
+          "brand": "PageTurn",
+          "attributes": {
+            "language": "EN",
+            "format": "hardcover"
+          },
+          "supplier": null
+        },
+        "quantity": 0,
+        "pricing": {
+          "unit_price": 24.99,
+          "discount": 0.0,
+          "tax": 0.0
+        },
+        "variants": [],
+        "discounts": null
+      }
+    ],
+    "payments": [
+      {
+        "payment_id": "PAY-1012-1",
+        "method": "cod",
+        "amount": 68.58,
+        "status": "pending",
+        "metadata": null,
+        "attempts": null
+      }
+    ],
+    "shipments": null,
+    "fees": null,
+    "labels": null,
+    "audit_log": [],
+    "metadata": {}
+  },
+  {
+    "order_id": "ORD-1013",
+    "order_date": "2026-09-07",
+    "order_status": "Delivered",
+    "customer": {
+      "customer_id": "C-2001",
+      "profile": {
+        "name": "Aanya Sharma",
+        "age": 34,
+        "preferences": {
+          "favorite_categories": [
+            "Electronics",
+            "Books"
+          ],
+          "preferred_brands": [
+            "NovaTech",
+            "PageTurn"
+          ],
+          "communication_channels": [
+            "email",
+            "sms"
+          ],
+          "notification_settings": {
+            "promo": [
+              "email",
+              "sms"
+            ],
+            "order_updates": [
+              "push"
+            ]
+          }
+        },
+        "contact": {
+          "email": "aanya.sharma@example.com",
+          "phone": "+91-98765-43210",
+          "addresses": [
+            {
+              "type": "home",
+              "city": "Mumbai",
+              "state": "MH",
+              "geo": {
+                "latitude": 19.076,
+                "longitude": 72.8777
+              },
+              "tags": [
+                "primary",
+                "apartment"
+              ]
+            },
+            {
+              "type": "work",
+              "city": "pune",
+              "state": "MH",
+              "geo": {
+                "latitude": 18.5204,
+                "longitude": 73.8567
+              },
+              "tags": []
+            }
+          ]
+        }
+      },
+      "loyalty": {
+        "tier": "Gold",
+        "points": 5600,
+        "benefits": [
+          {
+            "benefit_id": "B-FS",
+            "name": "Free Shipping",
+            "rules": {
+              "min_spend": 0.0,
+              "categories": []
+            }
+          },
+          {
+            "benefit_id": "B-EA",
+            "name": "Early Access",
+            "rules": {
+              "min_spend": null,
+              "categories": [
+                "Electronics"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "items": [
+      {
+        "item_id": "ORD-1013-I1",
+        "product": {
+          "product_id": "P106",
+          "name": "Smart Watch S2",
+          "category": "Electronics",
+          "brand": "NovaTech",
+          "attributes": {
+            "color": "Graphite",
+            "gps": "true",
+            "strap": "silicone"
+          },
+          "supplier": {
+            "name": "Nova Components Ltd",
+            "certifications": [
+              {
+                "code": "ISO9001",
+                "expires": "2027-03-01"
+              }
+            ]
+          }
+        },
+        "quantity": 1,
+        "pricing": {
+          "unit_price": 249.0,
+          "discount": 24.9,
+          "tax": 17.93
+        },
+        "variants": [
+          {
+            "variant_id": "V-106-SV",
+            "name": "Silver / 40mm",
+            "attributes": {
+              "color": "Silver",
+              "size": "40mm"
+            }
+          }
+        ],
+        "discounts": [
+          {
+            "discount_type": "PERCENT",
+            "code": "WATCH10",
+            "amount": 24.9,
+            "conditions": [
+              {
+                "condition_type": "category",
+                "value": "Electronics"
+              },
+              {
+                "condition_type": "customer_tier",
+                "value": "Gold"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item_id": "ORD-1013-I2",
+        "product": {
+          "product_id": "P109",
+          "name": "Hardcover Novel Bundle",
+          "category": "Books",
+          "brand": "PageTurn",
+          "attributes": {
+            "language": "EN",
+            "format": "hardcover"
+          },
+          "supplier": null
+        },
+        "quantity": 5,
+        "pricing": {
+          "unit_price": 24.99,
+          "discount": 15.0,
+          "tax": 8.8
+        },
+        "variants": null,
+        "discounts": [
+          {
+            "discount_type": "BULK",
+            "code": "BOOKS5",
+            "amount": 12.0,
+            "conditions": [
+              {
+                "condition_type": "min_quantity",
+                "value": "5"
+              }
+            ]
+          },
+          {
+            "discount_type": "FIXED",
+            "code": "READMORE",
+            "amount": 3.0,
+            "conditions": [
+              {
+                "condition_type": "category",
+                "value": "Books"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "payments": [
+      {
+        "payment_id": "PAY-1013-1",
+        "method": "card",
+        "amount": 360.78,
+        "status": "captured",
+        "metadata": {
+          "network": "visa",
+          "last4": "4242"
+        },
+        "attempts": [
+          {
+            "attempt_no": 1,
+            "result": "approved",
+            "gateway_response": {
+              "code": "00"
+            }
+          }
+        ]
+      }
+    ],
+    "shipments": [
+      {
+        "shipment_id": "SHP-1013-1",
+        "carrier": "BlueDart",
+        "tracking": "BD778901",
+        "packages": [
+          {
+            "package_id": "PKG-1013-1-1",
+            "weight": 0.3,
+            "dimensions": {
+              "length": 15.0,
+              "width": 12.0,
+              "height": 6.0
+            },
+            "contents": [
+              {
+                "item_id": "ORD-1013-I1",
+                "qty": 1
+              }
+            ]
+          },
+          {
+            "package_id": "PKG-1013-1-2",
+            "weight": 3.0,
+            "dimensions": {
+              "length": 32.0,
+              "width": 24.0,
+              "height": 18.0
+            },
+            "contents": [
+              {
+                "item_id": "ORD-1013-I2",
+                "qty": 5
+              }
+            ]
+          }
+        ],
+        "events": [
+          {
+            "timestamp": "2026-09-08T08:00:00Z",
+            "status": "picked_up",
+            "location": {
+              "city": "Mumbai",
+              "country": "IN"
+            }
+          },
+          {
+            "timestamp": "2026-09-09T12:00:00Z",
+            "status": "delivered",
+            "location": {
+              "city": "Mumbai",
+              "country": "IN"
+            }
+          }
+        ]
+      }
+    ],
+    "fees": {
+      "shipping": {
+        "amount": 0.0,
+        "taxable": false
+      }
+    },
+    "labels": {
+      "warehouse": [
+        "WH-WEST"
+      ]
+    },
+    "audit_log": [
+      {
+        "ts": "2026-09-07T10:00:00Z",
+        "actor": "system",
+        "action": "created"
+      },
+      {
+        "ts": "2026-09-09T12:00:00Z",
+        "actor": "carrier",
+        "action": "delivered"
+      }
+    ],
+    "metadata": {
+      "source": "web",
+      "device": "ios"
+    }
+  },
+  {
+    "order_id": "ORD-1014",
+    "order_date": "2026-09-08",
+    "order_status": "Shipped ",
+    "customer": {
+      "customer_id": "C-2013",
+      "profile": {
+        "name": "Yuki Tanaka",
+        "age": 30,
+        "preferences": {
+          "favorite_categories": [
+            "Books",
+            "Electronics"
+          ],
+          "preferred_brands": [
+            "PageTurn",
+            "SonicWave"
+          ],
+          "communication_channels": [
+            "email"
+          ],
+          "notification_settings": {
+            "promo": [
+              "email"
+            ]
+          }
+        },
+        "contact": {
+          "email": "yuki.tanaka@example.jp",
+          "phone": "+81-90-1234-5678",
+          "addresses": [
+            {
+              "type": "home",
+              "city": "Tokyo",
+              "state": "TK",
+              "geo": {
+                "latitude": 35.6762,
+                "longitude": 139.6503
+              },
+              "tags": [
+                "primary"
+              ]
+            },
+            {
+              "type": "work",
+              "city": "Yokohama",
+              "state": "KN",
+              "geo": {
+                "latitude": 35.4437,
+                "longitude": 139.638
+              },
+              "tags": []
+            }
+          ]
+        }
+      },
+      "loyalty": {
+        "tier": "Silver",
+        "points": 2050,
+        "benefits": [
+          {
+            "benefit_id": "B-FS",
+            "name": "Free Shipping",
+            "rules": {
+              "min_spend": 30.0,
+              "categories": [
+                "Books"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "items": [
+      {
+        "item_id": "ORD-1014-I1",
+        "product": {
+          "product_id": "P109",
+          "name": "Hardcover Novel Bundle",
+          "category": "Books",
+          "brand": "PageTurn",
+          "attributes": {
+            "language": "EN",
+            "format": "hardcover"
+          },
+          "supplier": null
+        },
+        "quantity": 3,
+        "pricing": {
+          "unit_price": 24.99,
+          "discount": 6.0,
+          "tax": 5.52
+        },
+        "variants": [
+          {
+            "variant_id": "V-109-EN",
+            "name": "English / Hardcover",
+            "attributes": {
+              "language": "EN",
+              "format": "hardcover"
+            }
+          }
+        ],
+        "discounts": [
+          {
+            "discount_type": "BULK",
+            "code": "BOOKS3",
+            "amount": 6.0,
+            "conditions": [
+              {
+                "condition_type": "min_quantity",
+                "value": "3"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item_id": "ORD-1014-I2",
+        "product": {
+          "product_id": "P102",
+          "name": "Noise-Cancel Headphones",
+          "category": "Electronics",
+          "brand": "SonicWave",
+          "attributes": {
+            "color": "Black",
+            "bluetooth": "5.3",
+            "anc": "true"
+          },
+          "supplier": {
+            "name": "SonicWave Mfg",
+            "certifications": [
+              {
+                "code": "CE",
+                "expires": "2028-01-15"
+              }
+            ]
+          }
+        },
+        "quantity": 1,
+        "pricing": {
+          "unit_price": 199.0,
+          "discount": 0.0,
+          "tax": 15.92
+        },
+        "variants": [
+          {
+            "variant_id": "V-102-BK",
+            "name": "Black",
+            "attributes": {
+              "color": "Black"
+            }
+          }
+        ],
+        "discounts": null
+      }
+    ],
+    "payments": [
+      {
+        "payment_id": "PAY-1014-1",
+        "method": "card",
+        "amount": 294.41,
+        "status": "captured",
+        "metadata": {
+          "network": "jcb",
+          "last4": "6611"
+        },
+        "attempts": [
+          {
+            "attempt_no": 1,
+            "result": "approved",
+            "gateway_response": {
+              "code": "00"
+            }
+          }
+        ]
+      }
+    ],
+    "shipments": [
+      {
+        "shipment_id": "SHP-1014-1",
+        "carrier": "Yamato",
+        "tracking": "YM3300",
+        "packages": [
+          {
+            "package_id": "PKG-1014-1-1",
+            "weight": 2.2,
+            "dimensions": {
+              "length": 30.0,
+              "width": 22.0,
+              "height": 14.0
+            },
+            "contents": [
+              {
+                "item_id": "ORD-1014-I1",
+                "qty": 3
+              },
+              {
+                "item_id": "ORD-1014-I2",
+                "qty": 1
+              }
+            ]
+          }
+        ],
+        "events": [
+          {
+            "timestamp": "2026-09-09T06:00:00Z",
+            "status": "picked_up",
+            "location": {
+              "city": "Tokyo",
+              "country": "JP"
+            }
+          },
+          {
+            "timestamp": "2026-09-10T08:00:00Z",
+            "status": "in_transit",
+            "location": {
+              "city": "Yokohama",
+              "country": "JP"
+            }
+          }
+        ]
+      }
+    ],
+    "fees": {
+      "shipping": {
+        "amount": 5.0,
+        "taxable": false
+      }
+    },
+    "labels": {
+      "warehouse": [
+        "WH-JP1"
+      ]
+    },
+    "audit_log": null,
+    "metadata": {
+      "source": "app",
+      "device": "android"
+    }
+  },
+  {
+    "order_id": "ORD-1015",
+    "order_date": "2026-09-08",
+    "order_status": "partially_shipped",
+    "customer": {
+      "customer_id": "C-2014",
+      "profile": {
+        "name": "Emma Johansson",
+        "age": 26,
+        "preferences": {
+          "favorite_categories": [
+            "Home & Kitchen"
+          ],
+          "preferred_brands": [
+            "HydroPeak",
+            "Lumo"
+          ],
+          "communication_channels": [
+            "email",
+            "sms"
+          ],
+          "notification_settings": {
+            "promo": [],
+            "order_updates": [
+              "email"
+            ]
+          }
+        },
+        "contact": {
+          "email": "emma.j@example.se",
+          "phone": "+46-70-123-4567",
+          "addresses": [
+            {
+              "type": "home",
+              "city": "Stockholm",
+              "state": "AB",
+              "geo": {
+                "latitude": 59.3293,
+                "longitude": 18.0686
+              },
+              "tags": [
+                "primary"
+              ]
+            }
+          ]
+        }
+      },
+      "loyalty": {
+        "tier": "Bronze",
+        "points": 410,
+        "benefits": [
+          {
+            "benefit_id": "B-FS",
+            "name": "Free Shipping",
+            "rules": {
+              "min_spend": 75.0,
+              "categories": null
+            }
+          }
+        ]
+      }
+    },
+    "items": [
+      {
+        "item_id": "ORD-1015-I1",
+        "product": {
+          "product_id": "P105",
+          "name": "Stainless Water Bottle",
+          "category": "Home & Kitchen",
+          "brand": "HydroPeak",
+          "attributes": {},
+          "supplier": null
+        },
+        "quantity": 2,
+        "pricing": {
+          "unit_price": 22.5,
+          "discount": 0.0,
+          "tax": 3.6
+        },
+        "variants": [
+          {
+            "variant_id": "V-105-BL",
+            "name": "Blue / 750ml",
+            "attributes": {
+              "color": "Blue",
+              "volume": "750ml"
+            }
+          }
+        ],
+        "discounts": null
+      },
+      {
+        "item_id": "ORD-1015-I2",
+        "product": {
+          "product_id": "P114",
+          "name": "Scented Candle Set",
+          "category": "Home & Kitchen",
+          "brand": "Lumo",
+          "attributes": {
+            "scent": "Lavender"
+          },
+          "supplier": null
+        },
+        "quantity": 3,
+        "pricing": {
+          "unit_price": 18.5,
+          "discount": 6.0,
+          "tax": 3.96
+        },
+        "variants": [
+          {
+            "variant_id": "V-114-LV",
+            "name": "Lavender",
+            "attributes": {
+              "scent": "Lavender"
+            }
+          },
+          {
+            "variant_id": "V-114-VN",
+            "name": "Vanilla",
+            "attributes": {
+              "scent": "Vanilla"
+            }
+          }
+        ],
+        "discounts": [
+          {
+            "discount_type": "BULK",
+            "code": "CANDLE3",
+            "amount": 6.0,
+            "conditions": [
+              {
+                "condition_type": "min_quantity",
+                "value": "3"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item_id": "ORD-1015-I3",
+        "product": {
+          "product_id": "P108",
+          "name": "Espresso Maker",
+          "category": "Home & Kitchen",
+          "brand": "BrewMaster",
+          "attributes": {
+            "pressure": "15bar",
+            "color": "Red"
+          },
+          "supplier": {
+            "name": "BrewMaster Italia",
+            "certifications": [
+              {
+                "code": "CE",
+                "expires": "2027-09-09"
+              },
+              {
+                "code": "UL",
+                "expires": "2026-10-01"
+              }
+            ]
+          }
+        },
+        "quantity": 1,
+        "pricing": {
+          "unit_price": 129.0,
+          "discount": 12.9,
+          "tax": 9.29
+        },
+        "variants": null,
+        "discounts": [
+          {
+            "discount_type": "PERCENT",
+            "code": "BREW10",
+            "amount": 12.9,
+            "conditions": [
+              {
+                "condition_type": "category",
+                "value": "Home & Kitchen"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "payments": [
+      {
+        "payment_id": "PAY-1015-1",
+        "method": "card",
+        "amount": 234.95,
+        "status": "captured",
+        "metadata": {
+          "network": "visa",
+          "last4": "2468"
+        },
+        "attempts": [
+          {
+            "attempt_no": 1,
+            "result": "approved",
+            "gateway_response": {
+              "code": "00"
+            }
+          }
+        ]
+      }
+    ],
+    "shipments": [
+      {
+        "shipment_id": "SHP-1015-1",
+        "carrier": "PostNord",
+        "tracking": "PN1100",
+        "packages": [
+          {
+            "package_id": "PKG-1015-1-1",
+            "weight": 1.0,
+            "dimensions": {
+              "length": 28.0,
+              "width": 10.0,
+              "height": 10.0
+            },
+            "contents": [
+              {
+                "item_id": "ORD-1015-I1",
+                "qty": 2
+              }
+            ]
+          }
+        ],
+        "events": [
+          {
+            "timestamp": "2026-09-09T07:00:00Z",
+            "status": "picked_up",
+            "location": {
+              "city": "Stockholm",
+              "country": "SE"
+            }
+          },
+          {
+            "timestamp": "2026-09-10T12:00:00Z",
+            "status": "in_transit",
+            "location": {
+              "city": "Uppsala",
+              "country": "SE"
+            }
+          }
+        ]
+      },
+      {
+        "shipment_id": "SHP-1015-2",
+        "carrier": "PostNord",
+        "tracking": null,
+        "packages": [
+          {
+            "package_id": "PKG-1015-2-1",
+            "weight": 2.7,
+            "dimensions": {
+              "length": 30.0,
+              "width": 28.0,
+              "height": 24.0
+            },
+            "contents": [
+              {
+                "item_id": "ORD-1015-I3",
+                "qty": 1
+              }
+            ]
+          },
+          {
+            "package_id": "PKG-1015-2-2",
+            "weight": null,
+            "dimensions": null,
+            "contents": [
+              {
+                "item_id": "ORD-1015-I2",
+                "qty": 3
+              }
+            ]
+          }
+        ],
+        "events": null
+      }
+    ],
+    "fees": {
+      "shipping": {
+        "amount": 7.5,
+        "taxable": false
+      }
+    },
+    "labels": {
+      "warehouse": [
+        "WH-SE1"
+      ],
+      "backorder": [
+        "P114"
+      ]
+    },
+    "audit_log": [],
+    "metadata": {
+      "source": "web",
+      "device": "desktop"
+    }
+  },
+  {
+    "order_id": "ORD-1016",
+    "order_date": "2026-09-09",
+    "order_status": "DELIVERED",
+    "customer": {
+      "customer_id": "C-2015",
+      "profile": {
+        "name": "Arjun Reddy",
+        "age": 33,
+        "preferences": {
+          "favorite_categories": [
+            "Electronics",
+            "Sports"
+          ],
+          "preferred_brands": [
+            "NovaTech",
+            "FlexFit"
+          ],
+          "communication_channels": [
+            "push"
+          ],
+          "notification_settings": {
+            "promo": [
+              "push"
+            ],
+            "order_updates": [
+              "push",
+              "email"
+            ]
+          }
+        },
+        "contact": {
+          "email": "arjun.reddy@example.in",
+          "phone": "+91-98480-22334",
+          "addresses": [
+            {
+              "type": "home",
+              "city": "Hyderabad",
+              "state": "TS",
+              "geo": {
+                "latitude": 17.385,
+                "longitude": 78.4867
+              },
+              "tags": [
+                "primary"
+              ]
+            },
+            {
+              "type": "parents",
+              "city": "Warangal",
+              "state": "TS",
+              "geo": null,
+              "tags": [
+                "family"
+              ]
+            }
+          ]
+        }
+      },
+      "loyalty": {
+        "tier": "gold",
+        "points": 5900,
+        "benefits": [
+          {
+            "benefit_id": "B-FS",
+            "name": "Free Shipping",
+            "rules": {
+              "min_spend": 0.0,
+              "categories": []
+            }
+          },
+          {
+            "benefit_id": "B-EA",
+            "name": "Early Access",
+            "rules": {
+              "min_spend": null,
+              "categories": [
+                "Electronics"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "items": [
+      {
+        "item_id": "ORD-1016-I1",
+        "product": {
+          "product_id": "P101",
+          "name": "UltraBook 14",
+          "category": "Electronics",
+          "brand": "NovaTech",
+          "attributes": {
+            "color": "Silver",
+            "ram": "16GB",
+            "storage": "512GB"
+          },
+          "supplier": {
+            "name": "Nova Components Ltd",
+            "certifications": [
+              {
+                "code": "ISO9001",
+                "expires": "2027-03-01"
+              },
+              {
+                "code": "RoHS",
+                "expires": "2026-12-31"
+              }
+            ]
+          }
+        },
+        "quantity": 1,
+        "pricing": {
+          "unit_price": 1199.0,
+          "discount": 144.9,
+          "tax": 84.33
+        },
+        "variants": [
+          {
+            "variant_id": "V-101-G32",
+            "name": "Graphite / 32GB",
+            "attributes": {
+              "color": "Graphite",
+              "ram": "32GB"
+            }
+          }
+        ],
+        "discounts": [
+          {
+            "discount_type": "PERCENT",
+            "code": "TECH10",
+            "amount": 119.9,
+            "conditions": [
+              {
+                "condition_type": "category",
+                "value": "Electronics"
+              },
+              {
+                "condition_type": "min_cart_value",
+                "value": "1000"
+              }
+            ]
+          },
+          {
+            "discount_type": "CASHBACK",
+            "code": "UPI5",
+            "amount": 25.0,
+            "conditions": [
+              {
+                "condition_type": "payment_method",
+                "value": "upi"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item_id": "ORD-1016-I2",
+        "product": {
+          "product_id": "P107",
+          "name": "Yoga Mat Pro",
+          "category": "Sports",
+          "brand": "FlexFit",
+          "attributes": {
+            "thickness": "6mm",
+            "material": "TPE"
+          },
+          "supplier": {
+            "name": "FlexFit Co",
+            "certifications": [
+              {
+                "code": "REACH",
+                "expires": "2027-02-28"
+              }
+            ]
+          }
+        },
+        "quantity": 1,
+        "pricing": {
+          "unit_price": 45.0,
+          "discount": 0.0,
+          "tax": 3.6
+        },
+        "variants": null,
+        "discounts": []
+      },
+      {
+        "item_id": "ORD-1016-I3",
+        "product": {
+          "product_id": "P112",
+          "name": "Protein Powder 2kg",
+          "category": "Health",
+          "brand": "MuscleLab",
+          "attributes": {
+            "flavor": "Chocolate",
+            "vegan": "false"
+          },
+          "supplier": {
+            "name": "MuscleLab Foods",
+            "certifications": [
+              {
+                "code": "GMP",
+                "expires": "2026-12-01"
+              }
+            ]
+          }
+        },
+        "quantity": 2,
+        "pricing": {
+          "unit_price": 54.0,
+          "discount": 0.0,
+          "tax": 8.64
+        },
+        "variants": [
+          {
+            "variant_id": "V-112-CH",
+            "name": "Chocolate 2kg",
+            "attributes": {
+              "flavor": "Chocolate"
+            }
+          }
+        ],
+        "discounts": null
+      }
+    ],
+    "payments": [
+      {
+        "payment_id": "PAY-1016-1",
+        "method": "upi",
+        "amount": 1303.67,
+        "status": "captured",
+        "metadata": {
+          "vpa": "arjun@okaxis"
+        },
+        "attempts": [
+          {
+            "attempt_no": 1,
+            "result": "failed",
+            "gateway_response": {
+              "code": "U16"
+            }
+          },
+          {
+            "attempt_no": 2,
+            "result": "approved",
+            "gateway_response": {
+              "code": "00"
+            }
+          }
+        ]
+      }
+    ],
+    "shipments": [
+      {
+        "shipment_id": "SHP-1016-1",
+        "carrier": "Delhivery",
+        "tracking": "DL7799",
+        "packages": [
+          {
+            "package_id": "PKG-1016-1-1",
+            "weight": 2.4,
+            "dimensions": {
+              "length": 40.0,
+              "width": 30.0,
+              "height": 8.0
+            },
+            "contents": [
+              {
+                "item_id": "ORD-1016-I1",
+                "qty": 1
+              }
+            ]
+          },
+          {
+            "package_id": "PKG-1016-1-2",
+            "weight": 4.1,
+            "dimensions": {
+              "length": 35.0,
+              "width": 25.0,
+              "height": 20.0
+            },
+            "contents": [
+              {
+                "item_id": "ORD-1016-I2",
+                "qty": 1
+              },
+              {
+                "item_id": "ORD-1016-I3",
+                "qty": 2
+              }
+            ]
+          }
+        ],
+        "events": [
+          {
+            "timestamp": "2026-09-10T09:00:00Z",
+            "status": "picked_up",
+            "location": {
+              "city": "Hyderabad",
+              "country": "IN"
+            }
+          },
+          {
+            "timestamp": "2026-09-11T15:00:00Z",
+            "status": "delivered",
+            "location": {
+              "city": "Hyderabad",
+              "country": "IN"
+            }
+          }
+        ]
+      }
+    ],
+    "fees": {
+      "shipping": {
+        "amount": 0.0,
+        "taxable": false
+      }
+    },
+    "labels": {
+      "warehouse": [
+        "WH-SOUTH"
+      ]
+    },
+    "audit_log": [
+      {
+        "ts": "2026-09-09T19:00:00Z",
+        "actor": "system",
+        "action": "created"
+      },
+      {
+        "ts": "2026-09-11T15:00:00Z",
+        "actor": "carrier",
+        "action": "delivered"
+      }
+    ],
+    "metadata": {
+      "source": "app",
+      "device": "android",
+      "campaign": "UPI-CASHBACK"
+    }
+  },
+  {
+    "order_id": "ORD-1017",
+    "order_date": "2026-09-10",
+    "order_status": "Delivered",
+    "customer": {
+      "customer_id": "C-2003",
+      "profile": {
+        "name": "Meera Iyer",
+        "age": 41,
+        "preferences": {
+          "favorite_categories": [
+            "Home & Kitchen",
+            "Apparel"
+          ],
+          "preferred_brands": [
+            "BrewMaster",
+            "GreenLoom",
+            "Lumo"
+          ],
+          "communication_channels": [
+            "email"
+          ],
+          "notification_settings": {
+            "promo": [],
+            "order_updates": [
+              "email",
+              "sms"
+            ]
+          }
+        },
+        "contact": {
+          "email": "meera.iyer@example.com",
+          "phone": "+91-99887-76655",
+          "addresses": [
+            {
+              "type": "home",
+              "city": "Chennai",
+              "state": "TN",
+              "geo": {
+                "latitude": 13.0827,
+                "longitude": 80.2707
+              },
+              "tags": [
+                "primary"
+              ]
+            },
+            {
+              "type": "billing",
+              "city": "Chennai",
+              "state": "TN",
+              "geo": {
+                "latitude": 13.0827,
+                "longitude": 80.2707
+              },
+              "tags": [
+                "primary"
+              ]
+            },
+            {
+              "type": "gift",
+              "city": "Bengaluru",
+              "state": "KA",
+              "geo": null,
+              "tags": [
+                "gift",
+                "office"
+              ]
+            }
+          ]
+        }
+      },
+      "loyalty": {
+        "tier": "Platinum",
+        "points": 15900,
+        "benefits": [
+          {
+            "benefit_id": "B-FS",
+            "name": "Free Shipping",
+            "rules": {
+              "min_spend": 0.0,
+              "categories": []
+            }
+          },
+          {
+            "benefit_id": "B-CS",
+            "name": "Concierge Support",
+            "rules": null
+          },
+          {
+            "benefit_id": "B-DC",
+            "name": "Double Points",
+            "rules": {
+              "min_spend": 250.0,
+              "categories": [
+                "Home & Kitchen",
+                "Apparel"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "items": [
+      {
+        "item_id": "ORD-1017-I1",
+        "product": {
+          "product_id": "P104",
+          "name": "Organic Cotton Tee",
+          "category": "Apparel",
+          "brand": "GreenLoom",
+          "attributes": {
+            "material": "cotton",
+            "fit": "regular"
+          },
+          "supplier": {
+            "name": "GreenLoom Textiles",
+            "certifications": [
+              {
+                "code": "GOTS",
+                "expires": "2026-11-30"
+              },
+              {
+                "code": "OEKO-TEX",
+                "expires": "2027-06-30"
+              }
+            ]
+          }
+        },
+        "quantity": 4,
+        "pricing": {
+          "unit_price": 24.0,
+          "discount": 20.0,
+          "tax": 6.08
+        },
+        "variants": [
+          {
+            "variant_id": "V-104-WH-S",
+            "name": "White / S",
+            "attributes": {
+              "color": "White",
+              "size": "S"
+            }
+          },
+          {
+            "variant_id": "V-104-WH-M",
+            "name": "White / M",
+            "attributes": {
+              "color": "White",
+              "size": "M"
+            }
+          },
+          {
+            "variant_id": "V-104-WH-L",
+            "name": "White / L",
+            "attributes": {
+              "color": "White",
+              "size": "L"
+            }
+          }
+        ],
+        "discounts": [
+          {
+            "discount_type": "BULK",
+            "code": "TEE4",
+            "amount": 12.0,
+            "conditions": [
+              {
+                "condition_type": "min_quantity",
+                "value": "4"
+              }
+            ]
+          },
+          {
+            "discount_type": "LOYALTY",
+            "code": "PLAT5",
+            "amount": 8.0,
+            "conditions": [
+              {
+                "condition_type": "customer_tier",
+                "value": "Platinum"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item_id": "ORD-1017-I2",
+        "product": {
+          "product_id": "P111",
+          "name": "Denim Jacket",
+          "category": "Apparel",
+          "brand": "Urban&Co",
+          "attributes": {
+            "material": "denim",
+            "fit": "slim"
+          },
+          "supplier": null
+        },
+        "quantity": 1,
+        "pricing": {
+          "unit_price": 79.0,
+          "discount": 0.0,
+          "tax": 6.32
+        },
+        "variants": [
+          {
+            "variant_id": "V-111-L",
+            "name": "L / Black",
+            "attributes": {
+              "size": "L",
+              "color": "Black"
+            }
+          }
+        ],
+        "discounts": null
+      }
+    ],
+    "payments": [
+      {
+        "payment_id": "PAY-1017-1",
+        "method": "card",
+        "amount": 167.4,
+        "status": "captured",
+        "metadata": {
+          "network": "mastercard",
+          "last4": "0007"
+        },
+        "attempts": [
+          {
+            "attempt_no": 1,
+            "result": "approved",
+            "gateway_response": null
+          }
+        ]
+      }
+    ],
+    "shipments": [
+      {
+        "shipment_id": "SHP-1017-1",
+        "carrier": "DHL",
+        "tracking": "DHL90150",
+        "packages": [
+          {
+            "package_id": "PKG-1017-1-1",
+            "weight": 1.6,
+            "dimensions": {
+              "length": 35.0,
+              "width": 28.0,
+              "height": 12.0
+            },
+            "contents": [
+              {
+                "item_id": "ORD-1017-I1",
+                "qty": 4
+              },
+              {
+                "item_id": "ORD-1017-I2",
+                "qty": 1
+              }
+            ]
+          }
+        ],
+        "events": [
+          {
+            "timestamp": "2026-09-11T08:00:00Z",
+            "status": "picked_up",
+            "location": {
+              "city": "Chennai",
+              "country": "IN"
+            }
+          },
+          {
+            "timestamp": "2026-09-12T10:00:00Z",
+            "status": "delivered",
+            "location": {
+              "city": "Chennai",
+              "country": "IN"
+            }
+          }
+        ]
+      }
+    ],
+    "fees": {
+      "shipping": {
+        "amount": 0.0,
+        "taxable": false
+      }
+    },
+    "labels": {
+      "warehouse": [
+        "WH-SOUTH"
+      ]
+    },
+    "audit_log": [],
+    "metadata": {
+      "source": "web",
+      "device": "desktop"
+    }
+  },
+  {
+    "order_id": "ORD-1018",
+    "order_date": "2026-09-10",
+    "order_status": "Shipped",
+    "customer": {
+      "customer_id": "C-2016",
+      "profile": {
+        "name": "Hannah Müller",
+        "age": 47,
+        "preferences": {
+          "favorite_categories": [
+            "Books",
+            "Home & Kitchen",
+            "Health"
+          ],
+          "preferred_brands": [
+            "PageTurn",
+            "BrewMaster",
+            "MuscleLab"
+          ],
+          "communication_channels": [
+            "email"
+          ],
+          "notification_settings": {
+            "promo": [
+              "email"
+            ],
+            "order_updates": [
+              "email"
+            ]
+          }
+        },
+        "contact": {
+          "email": "hannah.mueller@example.de",
+          "phone": "+49-151-2345-6789",
+          "addresses": [
+            {
+              "type": "home",
+              "city": "Berlin",
+              "state": "BE",
+              "geo": {
+                "latitude": 52.52,
+                "longitude": 13.405
+              },
+              "tags": [
+                "primary"
+              ]
+            },
+            {
+              "type": "billing",
+              "city": "Munich",
+              "state": "BY",
+              "geo": {
+                "latitude": 48.1351,
+                "longitude": 11.582
+              },
+              "tags": null
+            }
+          ]
+        }
+      },
+      "loyalty": {
+        "tier": "Silver",
+        "points": 1700,
+        "benefits": []
+      }
+    },
+    "items": [
+      {
+        "item_id": "ORD-1018-I1",
+        "product": {
+          "product_id": "P108",
+          "name": "Espresso Maker",
+          "category": "Home & Kitchen",
+          "brand": "BrewMaster",
+          "attributes": {
+            "pressure": "15bar",
+            "color": "Red"
+          },
+          "supplier": {
+            "name": "BrewMaster Italia",
+            "certifications": [
+              {
+                "code": "CE",
+                "expires": "2027-09-09"
+              },
+              {
+                "code": "UL",
+                "expires": "2026-10-01"
+              }
+            ]
+          }
+        },
+        "quantity": 1,
+        "pricing": {
+          "unit_price": 129.0,
+          "discount": 12.9,
+          "tax": 9.29
+        },
+        "variants": [
+          {
+            "variant_id": "V-108-RD",
+            "name": "Red",
+            "attributes": {
+              "color": "Red"
+            }
+          }
+        ],
+        "discounts": [
+          {
+            "discount_type": "PERCENT",
+            "code": "BREW10",
+            "amount": 12.9,
+            "conditions": [
+              {
+                "condition_type": "category",
+                "value": "Home & Kitchen"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item_id": "ORD-1018-I2",
+        "product": {
+          "product_id": "P109",
+          "name": "Hardcover Novel Bundle",
+          "category": "Books",
+          "brand": "PageTurn",
+          "attributes": {
+            "language": "EN",
+            "format": "hardcover"
+          },
+          "supplier": null
+        },
+        "quantity": 2,
+        "pricing": {
+          "unit_price": 24.99,
+          "discount": 0.0,
+          "tax": 4.0
+        },
+        "variants": null,
+        "discounts": null
+      },
+      {
+        "item_id": "ORD-1018-I3",
+        "product": {
+          "product_id": "P112",
+          "name": "Protein Powder 2kg",
+          "category": "Health",
+          "brand": "MuscleLab",
+          "attributes": {
+            "flavor": "Chocolate",
+            "vegan": "false"
+          },
+          "supplier": {
+            "name": "MuscleLab Foods",
+            "certifications": [
+              {
+                "code": "GMP",
+                "expires": "2026-12-01"
+              }
+            ]
+          }
+        },
+        "quantity": 1,
+        "pricing": {
+          "unit_price": 54.0,
+          "discount": 0.0,
+          "tax": 4.32
+        },
+        "variants": null,
+        "discounts": null
+      }
+    ],
+    "payments": [
+      {
+        "payment_id": "PAY-1018-1",
+        "method": "sepa",
+        "amount": 244.59,
+        "status": "captured",
+        "metadata": {
+          "iban_last4": "3201",
+          "mandate": "M-8812"
+        },
+        "attempts": [
+          {
+            "attempt_no": 1,
+            "result": "approved",
+            "gateway_response": {
+              "code": "ACSC"
+            }
+          }
+        ]
+      }
+    ],
+    "shipments": [
+      {
+        "shipment_id": "SHP-1018-1",
+        "carrier": "DHL",
+        "tracking": "DHL-DE-3301",
+        "packages": [
+          {
+            "package_id": "PKG-1018-1-1",
+            "weight": 3.1,
+            "dimensions": {
+              "length": 32.0,
+              "width": 28.0,
+              "height": 22.0
+            },
+            "contents": [
+              {
+                "item_id": "ORD-1018-I1",
+                "qty": 1
+              },
+              {
+                "item_id": "ORD-1018-I2",
+                "qty": 2
+              },
+              {
+                "item_id": "ORD-1018-I3",
+                "qty": 1
+              }
+            ]
+          }
+        ],
+        "events": [
+          {
+            "timestamp": "2026-09-11T09:00:00Z",
+            "status": "picked_up",
+            "location": {
+              "city": "Berlin",
+              "country": "DE"
+            }
+          },
+          {
+            "timestamp": "2026-09-12T11:00:00Z",
+            "status": "in_transit",
+            "location": {
+              "city": "Leipzig",
+              "country": "DE"
+            }
+          }
+        ]
+      }
+    ],
+    "fees": {
+      "shipping": {
+        "amount": 6.9,
+        "taxable": false
+      }
+    },
+    "labels": {
+      "warehouse": [
+        "WH-DE1"
+      ]
+    },
+    "audit_log": null,
+    "metadata": {
+      "source": "web",
+      "device": "desktop"
+    }
+  },
+  {
+    "order_id": "ORD-1019",
+    "order_date": "2026-09-11",
+    "order_status": "DELIVERED",
+    "customer": {
+      "customer_id": "C-2006",
+      "profile": {
+        "name": "Liam O'Connor",
+        "age": 52,
+        "preferences": {
+          "favorite_categories": [
+            "Electronics",
+            "Home & Kitchen",
+            "Books"
+          ],
+          "preferred_brands": [
+            "ViewMax",
+            "Zephyr",
+            "NovaTech"
+          ],
+          "communication_channels": [
+            "email",
+            "sms",
+            "push"
+          ],
+          "notification_settings": {
+            "promo": [
+              "push"
+            ],
+            "order_updates": [
+              "email",
+              "push",
+              "sms"
+            ],
+            "security": [
+              "email"
+            ]
+          }
+        },
+        "contact": {
+          "email": "liam.oconnor@example.ie",
+          "phone": "+353-85-555-0101",
+          "addresses": [
+            {
+              "type": "home",
+              "city": "Dublin",
+              "state": "D",
+              "geo": {
+                "latitude": 53.3498,
+                "longitude": -6.2603
+              },
+              "tags": [
+                "primary",
+                "house"
+              ]
+            },
+            {
+              "type": "work",
+              "city": "Cork",
+              "state": "CO",
+              "geo": {
+                "latitude": 51.8985,
+                "longitude": -8.4756
+              },
+              "tags": [
+                "office"
+              ]
+            }
+          ]
+        }
+      },
+      "loyalty": {
+        "tier": "Gold",
+        "points": 8600,
+        "benefits": [
+          {
+            "benefit_id": "B-FS",
+            "name": "Free Shipping",
+            "rules": {
+              "min_spend": 0.0,
+              "categories": []
+            }
+          },
+          {
+            "benefit_id": "B-EA",
+            "name": "Early Access",
+            "rules": {
+              "min_spend": null,
+              "categories": [
+                "Electronics",
+                "Books"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "items": [
+      {
+        "item_id": "ORD-1019-I1",
+        "product": {
+          "product_id": "P113",
+          "name": "4K Monitor 27in",
+          "category": "Electronics",
+          "brand": "ViewMax",
+          "attributes": {
+            "panel": "IPS",
+            "refresh": "144Hz"
+          },
+          "supplier": {
+            "name": "ViewMax Displays",
+            "certifications": [
+              {
+                "code": "TCO",
+                "expires": "2027-04-04"
+              }
+            ]
+          }
+        },
+        "quantity": 1,
+        "pricing": {
+          "unit_price": 349.0,
+          "discount": 50.0,
+          "tax": 23.92
+        },
+        "variants": [
+          {
+            "variant_id": "V-113-27",
+            "name": "27in",
+            "attributes": {
+              "size": "27in"
+            }
+          }
+        ],
+        "discounts": [
+          {
+            "discount_type": "FIXED",
+            "code": "MON50",
+            "amount": 50.0,
+            "conditions": [
+              {
+                "condition_type": "category",
+                "value": "Electronics"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item_id": "ORD-1019-I2",
+        "product": {
+          "product_id": "P106",
+          "name": "Smart Watch S2",
+          "category": "Electronics",
+          "brand": "NovaTech",
+          "attributes": {
+            "color": "Graphite",
+            "gps": "true",
+            "strap": "silicone"
+          },
+          "supplier": {
+            "name": "Nova Components Ltd",
+            "certifications": [
+              {
+                "code": "ISO9001",
+                "expires": "2027-03-01"
+              }
+            ]
+          }
+        },
+        "quantity": 1,
+        "pricing": {
+          "unit_price": 249.0,
+          "discount": 0.0,
+          "tax": 19.92
+        },
+        "variants": [
+          {
+            "variant_id": "V-106-GR",
+            "name": "Graphite / 44mm",
+            "attributes": {
+              "color": "Graphite",
+              "size": "44mm"
+            }
+          }
+        ],
+        "discounts": null
+      }
+    ],
+    "payments": [
+      {
+        "payment_id": "PAY-1019-1",
+        "method": "card",
+        "amount": 591.84,
+        "status": "captured",
+        "metadata": {
+          "network": "amex",
+          "last4": "1005"
+        },
+        "attempts": [
+          {
+            "attempt_no": 1,
+            "result": "approved",
+            "gateway_response": {
+              "code": "00"
+            }
+          }
+        ]
+      }
+    ],
+    "shipments": [
+      {
+        "shipment_id": "SHP-1019-1",
+        "carrier": "UPS",
+        "tracking": "1Z999AA10123456999",
+        "packages": [
+          {
+            "package_id": "PKG-1019-1-1",
+            "weight": 8.8,
+            "dimensions": {
+              "length": 75.0,
+              "width": 48.0,
+              "height": 18.0
+            },
+            "contents": [
+              {
+                "item_id": "ORD-1019-I1",
+                "qty": 1
+              }
+            ]
+          },
+          {
+            "package_id": "PKG-1019-1-2",
+            "weight": 0.4,
+            "dimensions": {
+              "length": 15.0,
+              "width": 12.0,
+              "height": 6.0
+            },
+            "contents": [
+              {
+                "item_id": "ORD-1019-I2",
+                "qty": 1
+              }
+            ]
+          }
+        ],
+        "events": [
+          {
+            "timestamp": "2026-09-12T07:00:00Z",
+            "status": "picked_up",
+            "location": {
+              "city": "Dublin",
+              "country": "IE"
+            }
+          },
+          {
+            "timestamp": "2026-09-13T12:00:00Z",
+            "status": "delivered",
+            "location": {
+              "city": "Dublin",
+              "country": "IE"
+            }
+          }
+        ]
+      }
+    ],
+    "fees": {
+      "shipping": {
+        "amount": 0.0,
+        "taxable": false
+      }
+    },
+    "labels": {
+      "warehouse": [
+        "WH-EU1"
+      ],
+      "fraud_flags": []
+    },
+    "audit_log": [],
+    "metadata": {
+      "source": "web",
+      "device": "desktop"
+    }
+  },
+  {
+    "order_id": "ORD-1020",
+    "order_date": "2026-09-12",
+    "order_status": "cancelled",
+    "customer": {
+      "customer_id": "C-2002",
+      "profile": {
+        "name": "rahul verma",
+        "age": 29,
+        "preferences": {
+          "favorite_categories": [
+            "Sports",
+            "Health"
+          ],
+          "preferred_brands": [
+            "FlexFit",
+            "MuscleLab"
+          ],
+          "communication_channels": [
+            "push"
+          ],
+          "notification_settings": {}
+        },
+        "contact": {
+          "email": "RAHUL.VERMA@EXAMPLE.COM",
+          "phone": null,
+          "addresses": [
+            {
+              "type": "home",
+              "city": "Delhi",
+              "state": "DL",
+              "geo": {
+                "latitude": 28.7041,
+                "longitude": 77.1025
+              },
+              "tags": null
+            }
+          ]
+        }
+      },
+      "loyalty": {
+        "tier": "silver",
+        "points": 1200,
+        "benefits": []
+      }
+    },
+    "items": [
+      {
+        "item_id": "ORD-1020-I1",
+        "product": {
+          "product_id": "P103",
+          "name": "Trail Runner Shoes",
+          "category": "Footwear",
+          "brand": "StrideX",
+          "attributes": {
+            "material": "mesh",
+            "gender": "unisex"
+          },
+          "supplier": {
+            "name": "StrideX Asia",
+            "certifications": []
+          }
+        },
+        "quantity": 2,
+        "pricing": {
+          "unit_price": 89.0,
+          "discount": 0.0,
+          "tax": 14.24
+        },
+        "variants": [
+          {
+            "variant_id": "V-103-42",
+            "name": "EU 42",
+            "attributes": {
+              "size": "42",
+              "color": "Orange"
+            }
+          },
+          {
+            "variant_id": "V-103-43",
+            "name": "EU 43",
+            "attributes": {
+              "size": "43",
+              "color": "Orange"
+            }
+          }
+        ],
+        "discounts": null
+      }
+    ],
+    "payments": [
+      {
+        "payment_id": "PAY-1020-1",
+        "method": "upi",
+        "amount": 196.23,
+        "status": "failed",
+        "metadata": {
+          "vpa": "rahul@okbank"
+        },
+        "attempts": [
+          {
+            "attempt_no": 1,
+            "result": "failed",
+            "gateway_response": {
+              "code": "U30"
+            }
+          }
+        ]
+      },
+      {
+        "payment_id": "PAY-1020-2",
+        "method": "upi",
+        "amount": 196.23,
+        "status": "failed",
+        "metadata": {
+          "vpa": "rahul@okbank"
+        },
+        "attempts": [
+          {
+            "attempt_no": 1,
+            "result": "failed",
+            "gateway_response": {
+              "code": "U30"
+            }
+          },
+          {
+            "attempt_no": 2,
+            "result": "failed",
+            "gateway_response": {
+              "code": "U30"
+            }
+          }
+        ]
+      }
+    ],
+    "shipments": [],
+    "fees": {
+      "shipping": {
+        "amount": 3.99,
+        "taxable": false
+      }
+    },
+    "labels": {
+      "fraud_flags": [
+        "repeated_failures"
+      ]
+    },
+    "audit_log": [
+      {
+        "ts": "2026-09-12T20:00:00Z",
+        "actor": "system",
+        "action": "created"
+      },
+      {
+        "ts": "2026-09-12T20:20:00Z",
+        "actor": "system",
+        "action": "cancelled",
+        "reason": "payment_failed"
+      }
+    ],
+    "metadata": {
+      "source": "app",
+      "device": "android",
+      "cancel_reason": "payment_failed"
+    }
+  },
+  {
+    "order_id": "ORD-1021",
+    "order_date": "2026-09-12",
+    "order_status": "SHIPPED",
+    "customer": {
+      "customer_id": "C-2008",
+      "profile": {
+        "name": "Chen Wei",
+        "age": 36,
+        "preferences": {
+          "favorite_categories": [
+            "Electronics"
+          ],
+          "preferred_brands": [
+            "Zephyr",
+            "NovaTech"
+          ],
+          "communication_channels": [
+            "email"
+          ],
+          "notification_settings": {
+            "order_updates": [
+              "email"
+            ]
+          }
+        },
+        "contact": {
+          "email": "chen.wei@example.cn",
+          "phone": "+86-138-0000-1111",
+          "addresses": [
+            {
+              "type": "home",
+              "city": "Shanghai",
+              "state": "SH",
+              "geo": {
+                "latitude": 31.2304,
+                "longitude": 121.4737
+              },
+              "tags": [
+                "primary"
+              ]
+            },
+            {
+              "type": "home",
+              "city": "Shanghai",
+              "state": "SH",
+              "geo": {
+                "latitude": 31.2304,
+                "longitude": 121.4737
+              },
+              "tags": [
+                "primary"
+              ]
+            }
+          ]
+        }
+      },
+      "loyalty": {
+        "tier": "GOLD",
+        "points": 6100,
+        "benefits": [
+          {
+            "benefit_id": "B-FS",
+            "name": "Free Shipping",
+            "rules": {
+              "min_spend": 0.0,
+              "categories": []
+            }
+          }
+        ]
+      }
+    },
+    "items": [
+      {
+        "item_id": "ORD-1021-I1",
+        "product": {
+          "product_id": "P113",
+          "name": "4K Monitor 27in",
+          "category": "Electronics",
+          "brand": "ViewMax",
+          "attributes": {
+            "panel": "IPS",
+            "refresh": "144Hz"
+          },
+          "supplier": {
+            "name": "ViewMax Displays",
+            "certifications": [
+              {
+                "code": "TCO",
+                "expires": "2027-04-04"
+              }
+            ]
+          }
+        },
+        "quantity": 2,
+        "pricing": {
+          "unit_price": 349.0,
+          "discount": 89.8,
+          "tax": 48.66
+        },
+        "variants": [
+          {
+            "variant_id": "V-113-27",
+            "name": "27in",
+            "attributes": {
+              "size": "27in"
+            }
+          }
+        ],
+        "discounts": [
+          {
+            "discount_type": "PERCENT",
+            "code": "VIEW10",
+            "amount": 69.8,
+            "conditions": [
+              {
+                "condition_type": "min_quantity",
+                "value": "2"
+              }
+            ]
+          },
+          {
+            "discount_type": "COUPON",
+            "code": "NEWMONTH",
+            "amount": 20.0,
+            "conditions": [
+              {
+                "condition_type": "region",
+                "value": "CN"
+              },
+              {
+                "condition_type": "customer_tier",
+                "value": "Gold"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item_id": "ORD-1021-I2",
+        "product": {
+          "product_id": "P101",
+          "name": "UltraBook 14",
+          "category": "Electronics",
+          "brand": "NovaTech",
+          "attributes": {
+            "color": "Silver",
+            "ram": "16GB",
+            "storage": "512GB"
+          },
+          "supplier": {
+            "name": "Nova Components Ltd",
+            "certifications": [
+              {
+                "code": "ISO9001",
+                "expires": "2027-03-01"
+              },
+              {
+                "code": "RoHS",
+                "expires": "2026-12-31"
+              }
+            ]
+          }
+        },
+        "quantity": 1,
+        "pricing": {
+          "unit_price": 1199.0,
+          "discount": 0.0,
+          "tax": 95.92
+        },
+        "variants": [
+          {
+            "variant_id": "V-101-S16",
+            "name": "Silver / 16GB",
+            "attributes": {
+              "color": "Silver",
+              "ram": "16GB"
+            }
+          }
+        ],
+        "discounts": null
+      },
+      {
+        "item_id": "ORD-1021-I3",
+        "product": {
+          "product_id": "P102",
+          "name": "Noise-Cancel Headphones",
+          "category": "Electronics",
+          "brand": "SonicWave",
+          "attributes": {
+            "color": "Black",
+            "bluetooth": "5.3",
+            "anc": "true"
+          },
+          "supplier": {
+            "name": "SonicWave Mfg",
+            "certifications": [
+              {
+                "code": "CE",
+                "expires": "2028-01-15"
+              }
+            ]
+          }
+        },
+        "quantity": 1,
+        "pricing": {
+          "unit_price": 199.0,
+          "discount": 0.0,
+          "tax": 15.92
+        },
+        "variants": [
+          {
+            "variant_id": "V-102-BK",
+            "name": "Black",
+            "attributes": {
+              "color": "Black"
+            }
+          }
+        ],
+        "discounts": []
+      }
+    ],
+    "payments": [
+      {
+        "payment_id": "PAY-1021-1",
+        "method": "alipay",
+        "amount": 2172.7,
+        "status": "captured",
+        "metadata": {
+          "account": "cw***@example.cn"
+        },
+        "attempts": [
+          {
+            "attempt_no": 1,
+            "result": "approved",
+            "gateway_response": {
+              "code": "OK"
+            }
+          }
+        ]
+      }
+    ],
+    "shipments": [
+      {
+        "shipment_id": "SHP-1021-1",
+        "carrier": "SF Express",
+        "tracking": "SF1234600",
+        "packages": [
+          {
+            "package_id": "PKG-1021-1-1",
+            "weight": 11.0,
+            "dimensions": {
+              "length": 70.0,
+              "width": 45.0,
+              "height": 25.0
+            },
+            "contents": [
+              {
+                "item_id": "ORD-1021-I1",
+                "qty": 2
+              }
+            ]
+          },
+          {
+            "package_id": "PKG-1021-1-2",
+            "weight": 2.4,
+            "dimensions": {
+              "length": 40.0,
+              "width": 30.0,
+              "height": 8.0
+            },
+            "contents": [
+              {
+                "item_id": "ORD-1021-I2",
+                "qty": 1
+              }
+            ]
+          },
+          {
+            "package_id": "PKG-1021-1-3",
+            "weight": 0.9,
+            "dimensions": {
+              "length": 25.0,
+              "width": 20.0,
+              "height": 10.0
+            },
+            "contents": [
+              {
+                "item_id": "ORD-1021-I3",
+                "qty": 1
+              }
+            ]
+          }
+        ],
+        "events": [
+          {
+            "timestamp": "2026-09-13T06:00:00Z",
+            "status": "picked_up",
+            "location": {
+              "city": "Shanghai",
+              "country": "CN"
+            }
+          },
+          {
+            "timestamp": "2026-09-14T10:00:00Z",
+            "status": "in_transit",
+            "location": {
+              "city": "Nanjing",
+              "country": "CN"
+            }
+          },
+          {
+            "timestamp": "2026-09-14T22:00:00Z",
+            "status": "in_transit",
+            "location": {
+              "city": "Hefei",
+              "country": "CN"
+            }
+          }
+        ]
+      }
+    ],
+    "fees": {
+      "shipping": {
+        "amount": 0.0,
+        "taxable": false
+      },
+      "insurance": {
+        "amount": 6.0,
+        "taxable": false
+      }
+    },
+    "labels": {
+      "warehouse": [
+        "WH-CN1"
+      ],
+      "fraud_flags": []
+    },
+    "audit_log": [],
+    "metadata": {
+      "source": "app",
+      "device": "ios"
+    }
+  },
+  {
+    "order_id": "ORD-1022",
+    "order_date": "2026-09-13",
+    "order_status": "pending",
+    "customer": {
+      "customer_id": "C-2001",
+      "profile": {
+        "name": "Aanya Sharma",
+        "age": 34,
+        "preferences": {
+          "favorite_categories": [
+            "Electronics",
+            "Books"
+          ],
+          "preferred_brands": [
+            "NovaTech",
+            "PageTurn"
+          ],
+          "communication_channels": [
+            "email",
+            "sms"
+          ],
+          "notification_settings": {
+            "promo": [
+              "email",
+              "sms"
+            ],
+            "order_updates": [
+              "push"
+            ]
+          }
+        },
+        "contact": {
+          "email": "aanya.sharma@example.com",
+          "phone": "+91-98765-43210",
+          "addresses": [
+            {
+              "type": "home",
+              "city": "Mumbai",
+              "state": "MH",
+              "geo": {
+                "latitude": 19.076,
+                "longitude": 72.8777
+              },
+              "tags": [
+                "primary",
+                "apartment"
+              ]
+            },
+            {
+              "type": "work",
+              "city": "pune",
+              "state": "MH",
+              "geo": {
+                "latitude": 18.5204,
+                "longitude": 73.8567
+              },
+              "tags": []
+            }
+          ]
+        }
+      },
+      "loyalty": {
+        "tier": "Gold",
+        "points": 6000,
+        "benefits": [
+          {
+            "benefit_id": "B-FS",
+            "name": "Free Shipping",
+            "rules": {
+              "min_spend": 0.0,
+              "categories": []
+            }
+          },
+          {
+            "benefit_id": "B-EA",
+            "name": "Early Access",
+            "rules": {
+              "min_spend": null,
+              "categories": [
+                "Electronics"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "items": [
+      {
+        "item_id": "ORD-1022-I1",
+        "product": {
+          "product_id": "P109",
+          "name": "Hardcover Novel Bundle",
+          "category": "Books",
+          "brand": "PageTurn",
+          "attributes": {
+            "language": "EN",
+            "format": "hardcover"
+          },
+          "supplier": null
+        },
+        "quantity": 1,
+        "pricing": {
+          "unit_price": 24.99,
+          "discount": 0.0,
+          "tax": 2.0
+        },
+        "variants": null,
+        "discounts": null
+      }
+    ],
+    "payments": [
+      {
+        "payment_id": "PAY-1022-1",
+        "method": "card",
+        "amount": 26.99,
+        "status": "pending",
+        "metadata": {
+          "network": "visa",
+          "last4": "4242"
+        },
+        "attempts": null
+      }
+    ],
+    "shipments": [],
+    "fees": {},
+    "labels": {},
+    "audit_log": null,
+    "metadata": {
+      "source": "web"
+    }
+  },
+  {
+    "order_id": "ORD-1023",
+    "order_date": "2026-09-14",
+    "order_status": "Delivered",
+    "customer": {
+      "customer_id": "C-2009",
+      "profile": {
+        "name": "Fatima Khan",
+        "age": 31,
+        "preferences": {
+          "favorite_categories": [
+            "Home & Kitchen",
+            "Books"
+          ],
+          "preferred_brands": [
+            "PageTurn",
+            "Lumo"
+          ],
+          "communication_channels": [
+            "email",
+            "push"
+          ],
+          "notification_settings": {
+            "promo": [
+              "email"
+            ],
+            "order_updates": []
+          }
+        },
+        "contact": {
+          "email": "fatima.khan@example.ae",
+          "phone": "+971-50-123-4567",
+          "addresses": [
+            {
+              "type": "home",
+              "city": "Dubai",
+              "state": "DU",
+              "geo": {
+                "latitude": 25.2048,
+                "longitude": 55.2708
+              },
+              "tags": [
+                "primary",
+                "apartment"
+              ]
+            },
+            {
+              "type": "work",
+              "city": "Abu Dhabi",
+              "state": "AZ",
+              "geo": {
+                "latitude": 24.4539,
+                "longitude": 54.3773
+              },
+              "tags": [
+                "office"
+              ]
+            }
+          ]
+        }
+      },
+      "loyalty": {
+        "tier": "Silver",
+        "points": 1450,
+        "benefits": []
+      }
+    },
+    "items": [
+      {
+        "item_id": "ORD-1023-I1",
+        "product": {
+          "product_id": "P114",
+          "name": "Scented Candle Set",
+          "category": "Home & Kitchen",
+          "brand": "Lumo",
+          "attributes": {
+            "scent": "Lavender"
+          },
+          "supplier": null
+        },
+        "quantity": 6,
+        "pricing": {
+          "unit_price": 18.5,
+          "discount": 20.0,
+          "tax": 7.28
+        },
+        "variants": [
+          {
+            "variant_id": "V-114-LV",
+            "name": "Lavender",
+            "attributes": {
+              "scent": "Lavender"
+            }
+          },
+          {
+            "variant_id": "V-114-VN",
+            "name": "Vanilla",
+            "attributes": {
+              "scent": "Vanilla"
+            }
+          },
+          {
+            "variant_id": "V-114-SW",
+            "name": "Sandalwood",
+            "attributes": {
+              "scent": "Sandalwood"
+            }
+          }
+        ],
+        "discounts": [
+          {
+            "discount_type": "BULK",
+            "code": "CANDLE6",
+            "amount": 15.0,
+            "conditions": [
+              {
+                "condition_type": "min_quantity",
+                "value": "6"
+              }
+            ]
+          },
+          {
+            "discount_type": "FIXED",
+            "code": "GCC5",
+            "amount": 5.0,
+            "conditions": [
+              {
+                "condition_type": "region",
+                "value": "AE"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item_id": "ORD-1023-I2",
+        "product": {
+          "product_id": "P105",
+          "name": "Stainless Water Bottle",
+          "category": "Home & Kitchen",
+          "brand": "HydroPeak",
+          "attributes": {},
+          "supplier": null
+        },
+        "quantity": 2,
+        "pricing": {
+          "unit_price": 22.5,
+          "discount": 0.0,
+          "tax": 3.6
+        },
+        "variants": null,
+        "discounts": null
+      },
+      {
+        "item_id": "ORD-1023-I3",
+        "product": {
+          "product_id": "P109",
+          "name": "Hardcover Novel Bundle",
+          "category": "Books",
+          "brand": "PageTurn",
+          "attributes": {
+            "language": "EN",
+            "format": "hardcover"
+          },
+          "supplier": null
+        },
+        "quantity": 1,
+        "pricing": {
+          "unit_price": 24.99,
+          "discount": 0.0,
+          "tax": 2.0
+        },
+        "variants": null,
+        "discounts": null
+      }
+    ],
+    "payments": [
+      {
+        "payment_id": "PAY-1023-1",
+        "method": "card",
+        "amount": 173.87,
+        "status": "captured",
+        "metadata": {
+          "network": "visa",
+          "last4": "7788"
+        },
+        "attempts": [
+          {
+            "attempt_no": 1,
+            "result": "approved",
+            "gateway_response": {
+              "code": "00"
+            }
+          }
+        ]
+      }
+    ],
+    "shipments": [
+      {
+        "shipment_id": "SHP-1023-1",
+        "carrier": "Aramex",
+        "tracking": "ARX55077",
+        "packages": [
+          {
+            "package_id": "PKG-1023-1-1",
+            "weight": 3.4,
+            "dimensions": {
+              "length": 30.0,
+              "width": 28.0,
+              "height": 24.0
+            },
+            "contents": [
+              {
+                "item_id": "ORD-1023-I1",
+                "qty": 6
+              }
+            ]
+          },
+          {
+            "package_id": "PKG-1023-1-2",
+            "weight": 1.2,
+            "dimensions": {
+              "length": 28.0,
+              "width": 10.0,
+              "height": 10.0
+            },
+            "contents": [
+              {
+                "item_id": "ORD-1023-I2",
+                "qty": 2
+              },
+              {
+                "item_id": "ORD-1023-I3",
+                "qty": 1
+              }
+            ]
+          }
+        ],
+        "events": [
+          {
+            "timestamp": "2026-09-15T06:00:00Z",
+            "status": "picked_up",
+            "location": {
+              "city": "Dubai",
+              "country": "AE"
+            }
+          },
+          {
+            "timestamp": "2026-09-15T17:00:00Z",
+            "status": "delivered",
+            "location": {
+              "city": "Dubai",
+              "country": "AE"
+            }
+          }
+        ]
+      }
+    ],
+    "fees": {
+      "shipping": {
+        "amount": 0.0,
+        "taxable": false
+      }
+    },
+    "labels": {
+      "warehouse": [
+        "WH-GCC"
+      ]
+    },
+    "audit_log": [],
+    "metadata": {
+      "source": "web",
+      "device": "desktop"
+    }
+  },
+  {
+    "order_id": "ORD-1024",
+    "order_date": "2026-09-14",
+    "order_status": "DELIVERED",
+    "customer": {
+      "customer_id": "C-2010",
+      "profile": {
+        "name": "Noah Williams",
+        "age": 45,
+        "preferences": {
+          "favorite_categories": [
+            "Sports",
+            "Electronics",
+            "Health"
+          ],
+          "preferred_brands": [
+            "FlexFit",
+            "ViewMax"
+          ],
+          "communication_channels": [
+            "email",
+            "sms"
+          ],
+          "notification_settings": {
+            "promo": [
+              "email"
+            ],
+            "order_updates": [
+              "sms"
+            ]
+          }
+        },
+        "contact": {
+          "email": "noah.w@example.com",
+          "phone": "+1-415-555-0133",
+          "addresses": [
+            {
+              "type": "home",
+              "city": "San Francisco",
+              "state": "CA",
+              "geo": {
+                "latitude": 37.7749,
+                "longitude": -122.4194
+              },
+              "tags": [
+                "primary"
+              ]
+            },
+            {
+              "type": "work",
+              "city": "Oakland",
+              "state": "CA",
+              "geo": {
+                "latitude": 37.8044,
+                "longitude": -122.2712
+              },
+              "tags": null
+            },
+            {
+              "type": "vacation",
+              "city": "Lake Tahoe",
+              "state": "CA",
+              "geo": {
+                "latitude": 39.0968,
+                "longitude": -120.0324
+              },
+              "tags": [
+                "seasonal"
+              ]
+            }
+          ]
+        }
+      },
+      "loyalty": {
+        "tier": "Platinum",
+        "points": 22900,
+        "benefits": [
+          {
+            "benefit_id": "B-FS",
+            "name": "Free Shipping",
+            "rules": {
+              "min_spend": 0.0,
+              "categories": []
+            }
+          },
+          {
+            "benefit_id": "B-DP",
+            "name": "Double Points",
+            "rules": {
+              "min_spend": 100.0,
+              "categories": [
+                "Sports",
+                "Health"
+              ]
+            }
+          },
+          {
+            "benefit_id": "B-CS",
+            "name": "Concierge Support",
+            "rules": null
+          }
+        ]
+      }
+    },
+    "items": [
+      {
+        "item_id": "ORD-1024-I1",
+        "product": {
+          "product_id": "P113",
+          "name": "4K Monitor 27in",
+          "category": "Electronics",
+          "brand": "ViewMax",
+          "attributes": {
+            "panel": "IPS",
+            "refresh": "144Hz"
+          },
+          "supplier": {
+            "name": "ViewMax Displays",
+            "certifications": [
+              {
+                "code": "TCO",
+                "expires": "2027-04-04"
+              }
+            ]
+          }
+        },
+        "quantity": 3,
+        "pricing": {
+          "unit_price": 349.0,
+          "discount": 125.64,
+          "tax": 73.71
+        },
+        "variants": [
+          {
+            "variant_id": "V-113-27",
+            "name": "27in",
+            "attributes": {
+              "size": "27in"
+            }
+          }
+        ],
+        "discounts": [
+          {
+            "discount_type": "PERCENT",
+            "code": "OFFICE12",
+            "amount": 125.64,
+            "conditions": [
+              {
+                "condition_type": "min_quantity",
+                "value": "3"
+              },
+              {
+                "condition_type": "customer_tier",
+                "value": "Platinum"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item_id": "ORD-1024-I2",
+        "product": {
+          "product_id": "P110",
+          "name": "Gaming Mouse G7",
+          "category": "Electronics",
+          "brand": "Zephyr",
+          "attributes": {
+            "dpi": "16000",
+            "wireless": "false"
+          },
+          "supplier": {
+            "name": "Zephyr Peripherals",
+            "certifications": [
+              {
+                "code": "FCC",
+                "expires": "2028-05-05"
+              }
+            ]
+          }
+        },
+        "quantity": 3,
+        "pricing": {
+          "unit_price": 59.0,
+          "discount": 15.0,
+          "tax": 12.96
+        },
+        "variants": [
+          {
+            "variant_id": "V-110-BK",
+            "name": "Black",
+            "attributes": {
+              "color": "Black"
+            }
+          }
+        ],
+        "discounts": [
+          {
+            "discount_type": "BULK",
+            "code": "MOUSE3",
+            "amount": 15.0,
+            "conditions": [
+              {
+                "condition_type": "min_quantity",
+                "value": "3"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item_id": "ORD-1024-I3",
+        "product": {
+          "product_id": "P102",
+          "name": "Noise-Cancel Headphones",
+          "category": "Electronics",
+          "brand": "SonicWave",
+          "attributes": {
+            "color": "Black",
+            "bluetooth": "5.3",
+            "anc": "true"
+          },
+          "supplier": {
+            "name": "SonicWave Mfg",
+            "certifications": [
+              {
+                "code": "CE",
+                "expires": "2028-01-15"
+              }
+            ]
+          }
+        },
+        "quantity": 1,
+        "pricing": {
+          "unit_price": 199.0,
+          "discount": 0.0,
+          "tax": 15.92
+        },
+        "variants": null,
+        "discounts": null
+      },
+      {
+        "item_id": "ORD-1024-I4",
+        "product": {
+          "product_id": "P106",
+          "name": "Smart Watch S2",
+          "category": "Electronics",
+          "brand": "NovaTech",
+          "attributes": {
+            "color": "Graphite",
+            "gps": "true",
+            "strap": "silicone"
+          },
+          "supplier": {
+            "name": "Nova Components Ltd",
+            "certifications": [
+              {
+                "code": "ISO9001",
+                "expires": "2027-03-01"
+              }
+            ]
+          }
+        },
+        "quantity": 1,
+        "pricing": {
+          "unit_price": 249.0,
+          "discount": 30.0,
+          "tax": 17.52
+        },
+        "variants": [
+          {
+            "variant_id": "V-106-GR",
+            "name": "Graphite / 44mm",
+            "attributes": {
+              "color": "Graphite",
+              "size": "44mm"
+            }
+          }
+        ],
+        "discounts": [
+          {
+            "discount_type": "FIXED",
+            "code": "WATCH30",
+            "amount": 30.0,
+            "conditions": []
+          }
+        ]
+      },
+      {
+        "item_id": "ORD-1024-I5",
+        "product": {
+          "product_id": "P101",
+          "name": "UltraBook 14",
+          "category": "Electronics",
+          "brand": "NovaTech",
+          "attributes": {
+            "color": "Silver",
+            "ram": "16GB",
+            "storage": "512GB"
+          },
+          "supplier": {
+            "name": "Nova Components Ltd",
+            "certifications": [
+              {
+                "code": "ISO9001",
+                "expires": "2027-03-01"
+              },
+              {
+                "code": "RoHS",
+                "expires": "2026-12-31"
+              }
+            ]
+          }
+        },
+        "quantity": 1,
+        "pricing": {
+          "unit_price": 1199.0,
+          "discount": 119.9,
+          "tax": 86.33
+        },
+        "variants": [
+          {
+            "variant_id": "V-101-S16",
+            "name": "Silver / 16GB",
+            "attributes": {
+              "color": "Silver",
+              "ram": "16GB"
+            }
+          },
+          {
+            "variant_id": "V-101-S16-UK",
+            "name": "UK keyboard layout",
+            "attributes": {
+              "layout": "UK"
+            }
+          }
+        ],
+        "discounts": [
+          {
+            "discount_type": "PERCENT",
+            "code": "TECH10",
+            "amount": 119.9,
+            "conditions": [
+              {
+                "condition_type": "category",
+                "value": "Electronics"
+              },
+              {
+                "condition_type": "min_cart_value",
+                "value": "1000"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "payments": [
+      {
+        "payment_id": "PAY-1024-1",
+        "method": "card",
+        "amount": 2301.9,
+        "status": "captured",
+        "metadata": {
+          "network": "visa",
+          "last4": "3030",
+          "wallet": "apple_pay"
+        },
+        "attempts": [
+          {
+            "attempt_no": 1,
+            "result": "approved",
+            "gateway_response": {
+              "code": "00"
+            }
+          }
+        ]
+      },
+      {
+        "payment_id": "PAY-1024-2",
+        "method": "gift_card",
+        "amount": 500.0,
+        "status": "captured",
+        "metadata": {
+          "card_no": "GC-2211"
+        },
+        "attempts": null
+      }
+    ],
+    "shipments": [
+      {
+        "shipment_id": "SHP-1024-1",
+        "carrier": "FedEx",
+        "tracking": "FX7100",
+        "packages": [
+          {
+            "package_id": "PKG-1024-1-1",
+            "weight": 25.0,
+            "dimensions": {
+              "length": 70.0,
+              "width": 50.0,
+              "height": 40.0
+            },
+            "contents": [
+              {
+                "item_id": "ORD-1024-I1",
+                "qty": 3
+              }
+            ]
+          },
+          {
+            "package_id": "PKG-1024-1-2",
+            "weight": 2.0,
+            "dimensions": {
+              "length": 25.0,
+              "width": 20.0,
+              "height": 10.0
+            },
+            "contents": [
+              {
+                "item_id": "ORD-1024-I2",
+                "qty": 3
+              }
+            ]
+          }
+        ],
+        "events": [
+          {
+            "timestamp": "2026-09-15T03:00:00Z",
+            "status": "picked_up",
+            "location": {
+              "city": "Oakland",
+              "country": "US"
+            }
+          },
+          {
+            "timestamp": "2026-09-16T10:00:00Z",
+            "status": "in_transit",
+            "location": {
+              "city": "Reno",
+              "country": "US"
+            }
+          },
+          {
+            "timestamp": "2026-09-17T18:00:00Z",
+            "status": "delivered",
+            "location": {
+              "city": "San Francisco",
+              "country": "US"
+            }
+          }
+        ]
+      },
+      {
+        "shipment_id": "SHP-1024-2",
+        "carrier": "FedEx",
+        "tracking": "FX7101",
+        "packages": [
+          {
+            "package_id": "PKG-1024-2-1",
+            "weight": 0.9,
+            "dimensions": {
+              "length": 25.0,
+              "width": 20.0,
+              "height": 10.0
+            },
+            "contents": [
+              {
+                "item_id": "ORD-1024-I3",
+                "qty": 1
+              }
+            ]
+          },
+          {
+            "package_id": "PKG-1024-2-2",
+            "weight": 0.4,
+            "dimensions": {
+              "length": 15.0,
+              "width": 12.0,
+              "height": 6.0
+            },
+            "contents": [
+              {
+                "item_id": "ORD-1024-I4",
+                "qty": 1
+              }
+            ]
+          },
+          {
+            "package_id": "PKG-1024-2-3",
+            "weight": 2.4,
+            "dimensions": {
+              "length": 40.0,
+              "width": 30.0,
+              "height": 8.0
+            },
+            "contents": [
+              {
+                "item_id": "ORD-1024-I5",
+                "qty": 1
+              }
+            ]
+          }
+        ],
+        "events": [
+          {
+            "timestamp": "2026-09-15T03:30:00Z",
+            "status": "picked_up",
+            "location": {
+              "city": "Oakland",
+              "country": "US"
+            }
+          },
+          {
+            "timestamp": "2026-09-16T11:00:00Z",
+            "status": "delivered",
+            "location": {
+              "city": "San Francisco",
+              "country": "US"
+            }
+          }
+        ]
+      }
+    ],
+    "fees": {
+      "shipping": {
+        "amount": 0.0,
+        "taxable": false
+      },
+      "expedite": {
+        "amount": 15.0,
+        "taxable": true
+      }
+    },
+    "labels": {
+      "warehouse": [
+        "WH-US-W"
+      ],
+      "fraud_flags": []
+    },
+    "audit_log": [
+      {
+        "ts": "2026-09-14T09:00:00Z",
+        "actor": "system",
+        "action": "created"
+      },
+      {
+        "ts": "2026-09-15T03:00:00Z",
+        "actor": "wms",
+        "action": "shipped"
+      },
+      {
+        "ts": "2026-09-17T18:00:00Z",
+        "actor": "carrier",
+        "action": "delivered"
+      }
+    ],
+    "metadata": {
+      "source": "web",
+      "device": "desktop",
+      "campaign": "OFFICE-SETUP"
+    }
+  },
+  {
+    "order_id": "ORD-1025",
+    "order_date": "2026-09-15",
+    "order_status": "Shipped",
+    "customer": {
+      "customer_id": "C-2015",
+      "profile": {
+        "name": "Arjun Reddy",
+        "age": 33,
+        "preferences": {
+          "favorite_categories": [
+            "Electronics",
+            "Sports"
+          ],
+          "preferred_brands": [
+            "NovaTech",
+            "FlexFit"
+          ],
+          "communication_channels": [
+            "push"
+          ],
+          "notification_settings": {
+            "promo": [
+              "push"
+            ],
+            "order_updates": [
+              "push",
+              "email"
+            ]
+          }
+        },
+        "contact": {
+          "email": "arjun.reddy@example.in",
+          "phone": "+91-98480-22334",
+          "addresses": [
+            {
+              "type": "home",
+              "city": "Hyderabad",
+              "state": "TS",
+              "geo": {
+                "latitude": 17.385,
+                "longitude": 78.4867
+              },
+              "tags": [
+                "primary"
+              ]
+            },
+            {
+              "type": "parents",
+              "city": "Warangal",
+              "state": "TS",
+              "geo": null,
+              "tags": [
+                "family"
+              ]
+            }
+          ]
+        }
+      },
+      "loyalty": {
+        "tier": "gold",
+        "points": 5900,
+        "benefits": [
+          {
+            "benefit_id": "B-FS",
+            "name": "Free Shipping",
+            "rules": {
+              "min_spend": 0.0,
+              "categories": []
+            }
+          },
+          {
+            "benefit_id": "B-EA",
+            "name": "Early Access",
+            "rules": {
+              "min_spend": null,
+              "categories": [
+                "Electronics"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "items": [
+      {
+        "item_id": "ORD-1025-I1",
+        "product": {
+          "product_id": "P106",
+          "name": "Smart Watch S2",
+          "category": "Electronics",
+          "brand": "NovaTech",
+          "attributes": {
+            "color": "Graphite",
+            "gps": "true",
+            "strap": "silicone"
+          },
+          "supplier": {
+            "name": "Nova Components Ltd",
+            "certifications": [
+              {
+                "code": "ISO9001",
+                "expires": "2027-03-01"
+              }
+            ]
+          }
+        },
+        "quantity": 2,
+        "pricing": {
+          "unit_price": 249.0,
+          "discount": 49.8,
+          "tax": 35.86
+        },
+        "variants": [
+          {
+            "variant_id": "V-106-GR",
+            "name": "Graphite / 44mm",
+            "attributes": {
+              "color": "Graphite",
+              "size": "44mm"
+            }
+          },
+          {
+            "variant_id": "V-106-SV",
+            "name": "Silver / 40mm",
+            "attributes": {
+              "color": "Silver",
+              "size": "40mm"
+            }
+          }
+        ],
+        "discounts": [
+          {
+            "discount_type": "PERCENT",
+            "code": "WATCH10",
+            "amount": 49.8,
+            "conditions": [
+              {
+                "condition_type": "category",
+                "value": "Electronics"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item_id": "ORD-1025-I2",
+        "product": {
+          "product_id": "P107",
+          "name": "Yoga Mat Pro",
+          "category": "Sports",
+          "brand": "FlexFit",
+          "attributes": {
+            "thickness": "6mm",
+            "material": "TPE"
+          },
+          "supplier": {
+            "name": "FlexFit Co",
+            "certifications": [
+              {
+                "code": "REACH",
+                "expires": "2027-02-28"
+              }
+            ]
+          }
+        },
+        "quantity": 2,
+        "pricing": {
+          "unit_price": 45.0,
+          "discount": 0.0,
+          "tax": 7.2
+        },
+        "variants": null,
+        "discounts": []
+      }
+    ],
+    "payments": [
+      {
+        "payment_id": "PAY-1025-1",
+        "method": "upi",
+        "amount": 581.26,
+        "status": "captured",
+        "metadata": {
+          "vpa": "arjun@okaxis"
+        },
+        "attempts": [
+          {
+            "attempt_no": 1,
+            "result": "approved",
+            "gateway_response": {
+              "code": "00"
+            }
+          }
+        ]
+      }
+    ],
+    "shipments": [
+      {
+        "shipment_id": "SHP-1025-1",
+        "carrier": "Delhivery",
+        "tracking": "DL7810",
+        "packages": [
+          {
+            "package_id": "PKG-1025-1-1",
+            "weight": 0.8,
+            "dimensions": {
+              "length": 20.0,
+              "width": 15.0,
+              "height": 8.0
+            },
+            "contents": [
+              {
+                "item_id": "ORD-1025-I1",
+                "qty": 2
+              }
+            ]
+          },
+          {
+            "package_id": "PKG-1025-1-2",
+            "weight": 2.4,
+            "dimensions": {
+              "length": 35.0,
+              "width": 25.0,
+              "height": 10.0
+            },
+            "contents": [
+              {
+                "item_id": "ORD-1025-I2",
+                "qty": 2
+              }
+            ]
+          }
+        ],
+        "events": [
+          {
+            "timestamp": "2026-09-16T09:00:00Z",
+            "status": "picked_up",
+            "location": {
+              "city": "Hyderabad",
+              "country": "IN"
+            }
+          },
+          {
+            "timestamp": "2026-09-17T07:00:00Z",
+            "status": "in_transit",
+            "location": {
+              "city": "Vijayawada",
+              "country": "IN"
+            }
+          }
+        ]
+      }
+    ],
+    "fees": {
+      "shipping": {
+        "amount": 0.0,
+        "taxable": false
+      }
+    },
+    "labels": {
+      "warehouse": [
+        "WH-SOUTH"
+      ]
+    },
+    "audit_log": [],
+    "metadata": {
+      "source": "app",
+      "device": "android"
+    }
+  },
+  {
+    "order_id": "ORD-1007",
+    "order_date": "2026-09-04",
+    "order_status": "shipped",
+    "customer": {
+      "customer_id": "C-2007",
+      "profile": {
+        "name": "Priya Nair",
+        "age": 23,
+        "preferences": {
+          "favorite_categories": [
+            "Apparel",
+            "Health"
+          ],
+          "preferred_brands": [
+            "GreenLoom",
+            "MuscleLab"
+          ],
+          "communication_channels": [
+            "sms"
+          ],
+          "notification_settings": {
+            "promo": [
+              "sms"
+            ]
+          }
+        },
+        "contact": {
+          "email": "priya.nair@example.com",
+          "phone": "+91-90000-11122",
+          "addresses": [
+            {
+              "type": "home",
+              "city": "Kochi",
+              "state": "KL",
+              "geo": {
+                "latitude": 9.9312,
+                "longitude": 76.2673
+              },
+              "tags": [
+                "primary"
+              ]
+            }
+          ]
+        }
+      },
+      "loyalty": {
+        "tier": "Silver",
+        "points": 980,
+        "benefits": [
+          {
+            "benefit_id": "B-FS",
+            "name": "Free Shipping",
+            "rules": {
+              "min_spend": 50.0,
+              "categories": [
+                "Apparel"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "items": [
+      {
+        "item_id": "ORD-1007-I1",
+        "product": {
+          "product_id": "P104",
+          "name": "Organic Cotton Tee",
+          "category": "Apparel",
+          "brand": "GreenLoom",
+          "attributes": {
+            "material": "cotton",
+            "fit": "regular"
+          },
+          "supplier": {
+            "name": "GreenLoom Textiles",
+            "certifications": [
+              {
+                "code": "GOTS",
+                "expires": "2026-11-30"
+              },
+              {
+                "code": "OEKO-TEX",
+                "expires": "2027-06-30"
+              }
+            ]
+          }
+        },
+        "quantity": 3,
+        "pricing": {
+          "unit_price": 24.0,
+          "discount": 9.0,
+          "tax": 5.04
+        },
+        "variants": [
+          {
+            "variant_id": "V-104-BK-S",
+            "name": "Black / S",
+            "attributes": {
+              "color": "Black",
+              "size": "S"
+            }
+          },
+          {
+            "variant_id": "V-104-BK-M",
+            "name": "Black / M",
+            "attributes": {
+              "color": "Black",
+              "size": "M"
+            }
+          }
+        ],
+        "discounts": [
+          {
+            "discount_type": "BULK",
+            "code": "TEE3",
+            "amount": 9.0,
+            "conditions": [
+              {
+                "condition_type": "min_quantity",
+                "value": "3"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item_id": "ORD-1007-I2",
+        "product": {
+          "product_id": "P112",
+          "name": "Protein Powder 2kg",
+          "category": "Health",
+          "brand": "MuscleLab",
+          "attributes": {
+            "flavor": "Chocolate",
+            "vegan": "false"
+          },
+          "supplier": {
+            "name": "MuscleLab Foods",
+            "certifications": [
+              {
+                "code": "GMP",
+                "expires": "2026-12-01"
+              }
+            ]
+          }
+        },
+        "quantity": 1,
+        "pricing": {
+          "unit_price": 54.0,
+          "discount": 0.0,
+          "tax": 4.32
+        },
+        "variants": null,
+        "discounts": null
+      }
+    ],
+    "payments": [
+      {
+        "payment_id": "PAY-1007-1",
+        "method": "upi",
+        "amount": 129.35,
+        "status": "captured",
+        "metadata": {
+          "vpa": "priya@oksbi"
+        },
+        "attempts": []
+      }
+    ],
+    "shipments": [
+      {
+        "shipment_id": "SHP-1007-1",
+        "carrier": "Ecom Express",
+        "tracking": "EE42001",
+        "packages": [
+          {
+            "package_id": "PKG-1007-1-1",
+            "weight": 1.4,
+            "dimensions": {
+              "length": 30.0,
+              "width": 25.0,
+              "height": 12.0
+            },
+            "contents": [
+              {
+                "item_id": "ORD-1007-I1",
+                "qty": 3
+              },
+              {
+                "item_id": "ORD-1007-I2",
+                "qty": 1
+              }
+            ]
+          }
+        ],
+        "events": [
+          {
+            "timestamp": "2026-09-05T09:00:00Z",
+            "status": "picked_up",
+            "location": {
+              "city": "Kochi",
+              "country": "IN"
+            }
+          }
+        ]
+      }
+    ],
+    "fees": {
+      "shipping": {
+        "amount": 2.99,
+        "taxable": false
+      }
+    },
+    "labels": {},
+    "audit_log": [
+      {
+        "ts": "2026-09-04T09:00:00Z",
+        "actor": "system",
+        "action": "created"
+      },
+      {
+        "ts": "2026-09-04T09:05:00Z",
+        "actor": "gateway",
+        "action": "paid"
+      },
+      {
+        "ts": "2026-09-05T08:00:00Z",
+        "actor": "wms",
+        "action": "shipped"
+      }
+    ],
+    "metadata": {
+      "source": "app",
+      "device": "android",
+      "ingest_batch": "B-0905-2"
+    }
+  }
+]
